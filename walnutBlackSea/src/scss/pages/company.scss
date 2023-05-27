@@ -1,0 +1,189 @@
+.main-screen.company {
+   @include adaptiveValue('margin-bottom', 100, 60);
+
+   & .video {
+      background-image: url('../img/company/video-bg.jpg');
+      min-height: 450px;
+   }
+}
+
+
+
+.manufacturer {
+   
+   &.company {
+      @include adaptiveValue('margin-bottom', 87, 40);
+
+      & .manufacturer__text {
+         max-width: 480px;
+
+         @include screen-xl {
+            max-width: 100%;
+            margin: 0;
+         }
+      }
+      & .manufacturer__body {
+         @include screen-xl {
+            grid-template-columns: 1fr;
+            column-gap: 0;
+            row-gap: 60px;
+         }
+      }
+      & .manufacturer__info {
+         @include screen-xxl {
+            margin: 0;
+         }
+      }
+      & .manufacturer__items {
+         @include screen-xl {
+            grid-column: span 2;
+         }
+      }
+      & .video {
+         background-image: url('../img/company/manufacturer-img.jpg');
+      }
+   }
+
+   &__history {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: 1fr 35.1165%;
+      height: 493px;
+      background-color: #FBFBFB;
+      font-family: 'Raleway';
+
+      @include screen-xxl {
+         grid-template-columns: 60% 40%;
+      }
+      @include screen-xl {
+         order: 4;
+         grid-template-columns: 1fr;
+         height: auto;
+         gap: 40px;
+      }
+   }
+
+   &__owner {
+      display: grid;
+      grid-template-columns: 41% 1fr;
+
+      @include screen-m {
+         grid-template-columns: 1fr;
+      }
+   }
+
+   &__photo {
+      max-width: 342px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+
+      @include screen-m {
+         display: none;
+      }
+   }
+
+   &__owner-descr {
+      padding: 32px 45px;
+
+      @include screen-m {
+         padding: 20px 10px;
+      }
+
+      p {
+         max-width: 290px;
+         margin-top: 10px;
+         font-size: 16px;
+         line-height: 131%;
+         margin-bottom: 37px;
+         letter-spacing: -0.01em;
+      }
+      blockquote {
+         font-style: italic;
+         font-size: 15px;
+         line-height: 130%;
+         padding: 0px 0px 0px 40px;
+         margin-bottom: 60px;
+         position: relative;
+
+         &::before {
+            position: absolute;
+            content: url('../img/icon/quotes.svg');
+            top: -3px;
+            left: 0;
+            width: 26px;
+            height: 18px;
+         }
+      }
+      button {
+         width: 188px;
+         letter-spacing: -0.02em;
+      }
+   }
+
+   &__history-title {
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      display: inline-block;
+      @include adaptiveValue('font-size', 32, 22);
+      @include adaptiveValue('line-height', 38, 28);
+   }
+
+   &__enterprise {
+      background-color: $green;
+      color: $white;
+      padding: 32px 40px;
+
+      @include screen-m {
+         padding: 20px 10px;
+      }
+   }
+
+   &__enterprise-box {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 15px;
+
+      p {
+         font-family: 'Montserrat';
+         line-height: 157%;
+      }
+   }
+   
+}
+
+
+
+.social-activity {
+   text-align: center;
+   background-color: #FBFBFB;
+   @include adaptiveValue('padding-top', 90, 40);
+   @include adaptiveValue('padding-bottom', 100, 60);
+
+
+   &__title {
+      margin-bottom: 20px;
+   }
+
+   &__sub-title {
+      @include adaptiveValue('margin-bottom', 61, 30);
+   }
+
+   &__button {
+      width: 235px;
+      margin-left: auto;
+      margin-right: auto;
+      @include adaptiveValue('margin-top', 68, 30);
+   }
+}
+
+
+
+.eco-company {
+   & .eco {
+      background-image: url('../img/company/eco-bg.jpg');
+   }
+}

@@ -1,0 +1,381 @@
+.spare-parts {
+   padding-top: 115px;
+   background-color: #fff;
+   @include screen-l {
+      padding-top: 169px;
+   }
+   @include screen-m {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+   }
+   @include screen-s {
+      padding-top: 180px;
+   }
+
+   &__title {
+      font-size: 20px;
+      line-height: 130%;
+      margin-bottom: 42px;
+      padding-left: 2px;
+      &.only-630 {
+         display: none;
+      }
+      @include screen-l {
+         padding-left: 0;
+         margin-bottom: 32px;
+      }
+      @include screen-m {
+         display: none;
+         max-width: 264px;
+         text-align: center;
+         &.only-630 {
+            display: block;
+         } 
+      }
+   }
+
+   &__body {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      z-index: 1;
+      position: relative;
+      @include screen-l {
+         grid-template-columns: repeat(3, 1fr);
+         gap: 30px;
+      }
+      @include screen-m {
+         grid-template-columns: repeat(2, 1fr);
+         gap: 30px;
+      }
+      @media (max-width: 430px) {
+         grid-template-columns: repeat(1, 1fr);
+      }
+      @include screen-s {
+         margin-top: -25px;
+      }
+   }
+
+   &__box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      row-gap: 16px;
+      max-width: 240px;
+      &:nth-child(1) {
+         padding-left: 31px;
+      }
+      &:nth-child(2) {
+         padding-left: 25px;
+      }
+      &:nth-child(3) {
+         padding-left: 12px;
+      }
+      &:nth-child(4) {
+         padding-left: 18px;
+      }
+      &:nth-child(5) {
+         padding-left: 11px;
+      }
+
+      &:nth-child(1) .spare-parts__text {
+         padding-right: 5px;
+      }
+      &:nth-child(2) .spare-parts__text {
+         padding-right: 1px;
+      }
+      &:nth-child(4) .spare-parts__text {
+         padding-right: 2px;
+      }
+      &:nth-child(5) .spare-parts__text {
+         padding-right: 7px;
+      }
+
+      @include screen-l {
+         &:nth-child(1) {
+            padding-left: 0;
+            margin-left: -17px;
+         }
+         &:nth-child(2) {
+            padding-left: 0;
+         }
+         &:nth-child(3) {
+            padding-left: 52px;
+         }
+         &:nth-child(4) {
+            margin-left: -30px;
+         }
+         &:nth-child(5) {
+            padding-left: 0;
+            width: 226px;
+         }
+
+         &:nth-child(3) .spare-parts__text {
+            margin-left: -3px;
+         }
+         &:nth-child(5) .spare-parts__text {
+            padding-right: 2px;
+         }
+      }
+      @media (max-width: 767px) {
+         &:nth-child(5) {
+            width: 100%;
+         }
+         &:nth-child(1), &:nth-child(2), &:nth-child(3),
+         &:nth-child(4), &:nth-child(5) {
+            margin-left: 0;
+            padding-left: 0;
+         }
+      }
+      @include screen-s {
+         row-gap: 11px;
+         max-width: 100%;
+      }
+   }
+
+   &__icon {
+      max-width: 100%;
+   }
+
+   &__text {
+      text-align: center;
+      line-height: 138%;
+      color: $color-dark-grey;
+      @media (max-width: 430px) {
+         br {
+            display: none;
+         }
+      }
+      @include screen-s {
+         & .only-320 {
+            display: block;
+         } 
+      }
+   }
+
+   &__image {
+      max-width: 100%;
+      margin-top: -18px;
+      @include screen-l {
+         display: none;
+      }
+   }
+   &__image.adaptive {
+      max-width: 100%;
+      display: none;
+      @include screen-l {
+         display: block;
+         margin-top: -6px;
+      }
+      @include screen-s {
+         margin-top: 33px;
+      }
+   }
+}
+
+.effective-work {
+   padding-bottom: 47px;
+   background-color: #fff;
+   @include screen-l {
+      padding-bottom: 57px;
+   }
+   @include screen-m {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+   }
+   @include screen-s {
+      padding-bottom: 77px;
+   }
+
+   &__title {
+      font-size: 20px;
+      line-height: 130%;
+      padding-left: 2px;
+      margin-top: -80px;
+      margin-bottom: 49px;
+      &.only-630 {
+         display: none;
+      }
+      @include screen-l {
+         margin-top: -8px; 
+         padding-left: 0;
+         margin-bottom: 19px;
+      }
+      @include screen-m {
+         display: none;
+         margin-top: 51px;
+         margin-bottom: 10px;
+         max-width: 264px;
+         text-align: center;
+         &.only-630 {
+            display: block;
+         } 
+      }
+   }
+
+   &__body {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 20px;
+      z-index: 1;
+      position: relative;
+      @media (max-width: 1280px) {
+         grid-template-columns: repeat(3, 1fr);
+         gap: 33px;
+      }
+      @include screen-m {
+         grid-template-columns: repeat(2, 1fr);
+         gap: 30px;
+      }
+      @media (max-width: 430px) {
+         grid-template-columns: repeat(1, 1fr);
+      }
+      @include screen-s {
+         margin-top: -8px;
+      }
+   }
+
+   &__box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      row-gap: 16px;
+      width: 210px;
+      @media (max-width: 1391px) {
+         width: 100%;
+      }
+      &:nth-child(1) {
+         margin-left: -11px;
+      }
+      &:nth-child(2) {
+         margin-left: -5px;
+      }
+      &:nth-child(3) {
+         margin-left: 9px;
+      }
+      &:nth-child(4) {
+         margin-left: 12px;
+         width: 235px;
+         @media (max-width: 1391px) {
+            width: 100%;
+         }
+      }
+      &:nth-child(5) {
+         margin-left: 10px;
+      }
+      &:nth-child(6) {
+         margin-left: -13px;
+      }
+
+      &:nth-child(1) .effective-work__text {
+         padding-right: 3px;
+      }
+      &:nth-child(2) .effective-work__text {
+         padding-right: 3px;
+      }
+      &:nth-child(3) .effective-work__text {
+         padding-right: 3px;
+      }
+      &:nth-child(4) .effective-work__text {
+         padding-right: 3px;
+      }
+      &:nth-child(5) .effective-work__text {
+         padding-right: 4px;
+      }
+      &:nth-child(6) .effective-work__text {
+         padding-right: 1px;
+      }
+      @media (max-width: 1280px) {
+         &:nth-child(1), &:nth-child(2), &:nth-child(3),
+         &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+            margin-left: 0;
+         }
+      }
+
+      @include screen-l {
+         width: 240px;
+
+         &:nth-child(1) {
+            margin-left: -4px;
+         }
+         &:nth-child(2) {
+            margin-left: -35px;
+         }
+         &:nth-child(3) {
+            margin-left: -22px;
+         }
+         &:nth-child(4) {
+            margin-left: -2px;
+         }
+         &:nth-child(5) {
+            margin-left: -35px;
+         }
+         &:nth-child(6) {
+            margin-left: -22px;
+         }
+
+         &:nth-child(1) .effective-work__text {
+            padding-right: 1px;
+         }
+         &:nth-child(2) .effective-work__text {
+            padding-right: 2px;
+         }
+         &:nth-child(5) .effective-work__text {
+            padding-right: 0;
+         }
+      }
+      @media (max-width: 767px) {
+         width: 100%;
+
+         &:nth-child(1), &:nth-child(2), &:nth-child(3),
+         &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+            margin-left: 0;
+         }
+      }
+      @include screen-s {
+         row-gap: 11px;
+      }
+   }
+
+   &__text {
+      text-align: center;
+      line-height: 137%;
+      color: $color-dark-grey;
+      & .only-768, & .only-320 {
+         display: none;
+      }
+      @include screen-l {
+         & .only-768 {
+            display: block;
+         }
+      }
+      @media (max-width: 430px) {
+         & .only-768 {
+            display: none;
+         }
+         br {
+            display: none;
+         }
+      }
+      @include screen-s {
+         line-height: 138%;
+         & .only-320 {
+            display: block;
+         } 
+      }
+   }
+
+   & .spare-parts__image.adaptive {
+      margin-top: 11px;
+      @include screen-s {
+         margin-top: -1px;
+      }
+   }
+}
+

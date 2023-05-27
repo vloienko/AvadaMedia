@@ -1,0 +1,255 @@
+html,
+body {
+	height: 100%;
+}
+
+body._lock {
+   overflow: hidden;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	overflow-x: hidden;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+
+.footer {
+	flex: 0 0 auto;
+}
+
+textarea {
+	resize: none;
+	white-space: nowrap;
+}
+
+.container {
+	max-width: 1344px;
+	margin: 0 auto;
+	padding: 0 15px;
+	@include screen-xl {
+		max-width: 942px;
+	}
+	@include screen-l {
+		max-width: 702px;
+	}
+	@include screen-s {
+		max-width: 357px;
+	}
+}
+
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 13px;
+	letter-spacing: 0.06em;
+	color: $text-black;
+}
+
+
+.discover-more {
+	font-weight: 700;
+	font-size: 10px;
+	line-height: 12px;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	position: relative;
+	padding-left: 9px;
+	padding-right: 9px;
+	margin-left: 8px;
+	transition: all 0.5s;
+	max-width: fit-content;
+
+	&:hover {
+		font-size: 14px;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 8px;
+		height: 1px;
+		top: 50%;
+		right: 100%;
+		background-color: rgba(255, 255, 255, 0.4);
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 56px;
+		height: 1px;
+		top: 50%;
+		left: 100%;
+		background-color: rgba(255, 255, 255, 0.4);
+	}
+}
+
+.contact-info {
+	max-width: 640px;
+	@include screen-m {
+		justify-content: space-between;
+		max-width: 400px;
+	}
+	
+	&__social {
+		display: flex;
+		gap: 13px;
+		margin-bottom: 5px;
+		margin-right: 118px;
+		@include screen-xl {
+			gap: 11px;
+			margin-right: 76px;
+		}
+		@include screen-l {
+			margin-right: 60px;
+		}
+		@include screen-m {
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+		@media (max-width: 570px) {
+			display: none;
+		}
+	}
+
+	&__link {
+		width: 20px;
+		transition: all .3s;
+		@media (any-hover: hover) {
+			&:hover {
+				font-size: 14px;
+			}
+		}
+		&:last-child {
+			margin-left: -4px;
+		}
+	}
+
+	&__city {
+		background-color: rgba(255, 255, 255, 0.5);
+		box-shadow: 0px 1.15336px 1.22544px rgba(0, 0, 0, 0.2), inset 0px -0.288339px 0.0720847px rgba(255, 255, 255, 0.23);
+		backdrop-filter: blur(1px);
+		border-radius: 8.70783px;
+		padding: 6px 13px 5px 13px;
+		border-color: transparent;
+		position: relative;
+		cursor: pointer;
+		margin-right: 72px;
+		@include screen-xl {
+			background-color: transparent;
+			border: 1px solid #fff;
+			border-radius: 88px;
+			margin-right: 39px;
+		}
+		@include screen-l {
+			padding: 6px 11px 5px 13px;
+			margin-right: 31px;
+		}
+		@include screen-m {
+			margin-right: 0;
+			margin-bottom: 6px;
+		}
+		@include screen-s {
+			padding: 5px 11px 5px 11px;
+			margin: 0;
+		}
+		&-box {
+			display: flex;
+			align-items: center;
+			gap: 7px;
+			padding-right: 39px;
+			position: relative;
+			@include screen-xl {
+				padding-right: 40px;
+			}
+			&::after {
+				position: absolute;
+				content: url('../img/main/space/arrow.svg');
+				top: 5%;
+				right: 0;
+			}
+		}
+		&-current {
+			display: inline-block;
+			cursor: pointer;
+		}
+		&-list {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			z-index: 1;
+			display: none;
+		}
+		&-list.active {
+			display: block;
+		}
+		&-item {
+			display: block;
+			padding: 2px 10px 2px 10px;
+			cursor: pointer;
+			&:hover {
+				color: orange;
+			}
+		}
+	}
+
+	&__communication {
+		display: flex;
+		gap: 31px;
+		margin-bottom: 5px;
+		@include screen-xl {
+			gap: 25px;
+		}
+		@include screen-l {
+			margin-bottom: 6px;
+			gap: 17px;
+		}
+		@include screen-m {
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: center;
+			row-gap: 5px;
+		}
+		@include screen-s {
+			margin: 0;
+			row-gap: 8px;
+		}
+	}
+
+	&__item {
+		transition: all .3s;
+		@include screen-s {
+			margin-bottom: -2px;
+		}
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
+
+.h2-title {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 44px;
+	@include screen-xl {
+		font-size: 32px;
+		line-height: 39px;
+	}
+	@include screen-m {
+		font-size: 26px;
+		line-height: 32px;
+	}
+}
+.main-text {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 24px;
+	opacity: 0.7;
+}

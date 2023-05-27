@@ -1,0 +1,433 @@
+.latest-news {
+   padding-top: 208px;
+   padding-bottom: 140px;
+   @include screen-xl {
+      padding-top: 154px;
+      padding-bottom: 124px;
+   }
+   @include screen-l {
+      padding-top: 138px;
+      padding-bottom: 104px;
+   }
+   @include screen-s {
+      padding-top: 116px;
+      padding-bottom: 80px;
+   }
+
+   &__box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px 136px 0px 133px;
+      margin-bottom: 124px;
+      @include screen-xl {
+         flex-direction: column;
+         align-items: flex-start;
+         padding: 0px 0px 0px 103px;
+         margin-bottom: 104px;
+         row-gap: 15px;   
+      }
+      @include screen-l {
+         padding-left: 76px;
+         margin-bottom: 96px;
+      }
+      @include screen-m {
+         padding-left: 0;
+      }
+      @include screen-s {
+         row-gap: 17px;   
+         margin-bottom: 64px;
+      }
+   }
+
+   &__title {
+      letter-spacing: normal;
+   }
+
+   &__navbar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      column-gap: 32px;
+      margin-top: 9px;
+      @include screen-xl {
+         column-gap: 26.5px;
+      }
+      @include screen-l {
+         column-gap: 28.5px;
+      }
+      @include screen-s {
+         display: none;
+      }
+      &-btn {
+         color: $text-gray;
+         padding-bottom: 2px;
+         border-bottom: 1px solid transparent;
+         transition: all .3s ease-in-out;
+         background-color: transparent;
+         letter-spacing: 0.06em;
+         &.active {
+            color: $text-black;
+            border-color: #3A3E4B;
+         }
+         &:hover {
+            color: $text-black;
+            border-color: #3A3E4B;
+         }
+      }
+   }
+
+   &__select-wrapper {
+      display: none;
+      @include screen-s {
+         display: block;
+         width: 128px;
+         height: 29px;
+         position: relative;
+         &::before {
+            content: url('../img/news/latest-news/select-arrow.svg');
+            position: absolute;
+            top: 0;
+            right: 11px;
+            transform: translateY(80%);
+            display: block;
+            width: 10px;
+            height: 10px;
+            pointer-events: none;
+         }
+      }
+   }
+
+   &__navbar-mobile {
+      @include screen-s {
+         font-weight: 600;
+         font-size: 11px;
+         line-height: 13px;
+         letter-spacing: 0.135em;
+         border: 1px solid #C4C4C4;
+         border-radius: 88px;
+         padding: 7px 24px 7px 12px;
+         width: 128px;
+         height: 29px;
+         appearance: none;
+         -moz-appearance: none;
+         -webkit-appearance: none;
+         cursor: pointer;
+      }
+   }
+
+   &__projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 7px;
+      row-gap: 8px;
+      margin-bottom: 96px;
+      letter-spacing: normal;
+      @include screen-xl {
+         gap: 6px;
+         margin-bottom: 65px;
+      }
+      @include screen-l {
+         margin-bottom: 57px;
+      }
+      @media (max-width: 580px) {
+         grid-template-columns: 1fr;
+      }
+      @include screen-s {
+         margin-bottom: 49px;
+      }
+   }
+
+   &__card {
+      padding: 57px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background-color: #F2F2F2;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 653px;
+      @include screen-xl {
+         padding: 46px;
+         height: 453px;
+      }
+      @include screen-l {
+         padding: 32px;
+         height: 333px;
+      }
+      @include screen-s {
+         padding: 24px;
+         height: 327px;
+      }
+      &:nth-child(1) {
+         @include screen-s {
+            height: 137px;
+         }
+      }
+      &:nth-child(2) {
+         background-image: url('../img/news/latest-news/img-1.jpg');
+         @include screen-s {
+            order: -1;
+            height: 218px;
+            margin-bottom: -6px;
+         }
+      }
+      &:nth-child(3) {
+         background-image: url('../img/news/latest-news/img-2.jpg');
+      }
+      &:nth-child(4) {
+         background-image: url('../img/news/latest-news/img-3.jpg');
+      }
+      &:nth-child(5) {
+         background-image: url('../img/news/latest-news/img-4.jpg');
+         @include screen-s {
+            height: 218px;
+            margin-bottom: -6px;
+         }
+      }
+      &:nth-child(6) {
+         @include screen-s {
+            height: 137px;
+         }
+      }
+      &-title {
+         font-weight: 700;
+         font-size: 28px;
+         line-height: 34px;
+         margin-bottom: 22px;
+         max-width: 365px;
+         &.white {
+            color: $text-white;
+            line-height: 36px;
+            max-width: 100%;
+            margin-bottom: 0;
+         }
+         @include screen-xl {
+            font-size: 20px;
+            line-height: 24px;
+            max-width: 273px;
+            &.white {
+               line-height: 25px;
+            }
+         }
+         @include screen-l {
+            font-size: 16px;
+            line-height: 20px;
+            max-width: 208px;
+            margin-bottom: 42px;
+            &.white {
+               line-height: 20px;
+            }
+         }
+         @include screen-s {
+            max-width: 279px;
+            margin-bottom: 37px;
+         }
+      }
+   
+      &-text {
+         margin-bottom: 59px;
+         max-width: 433px;
+         @include screen-xl {
+            margin-bottom: 44px;
+            max-width: 348px;
+         }
+         @include screen-l {
+            display: none;
+         }
+      }
+
+      &-btn {
+         &::before, &::after {
+            background-color: rgba(49, 49, 49, 0.2);
+         }
+      }
+   }
+
+   &__navigation {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 33px;
+      // @include screen-xl {
+      //    column-gap: 33px;
+      // }
+      @include screen-l {
+         column-gap: 25px;
+      }
+      &-items {
+         display: flex;
+         align-items: center;
+         column-gap: 21px;
+         // @include screen-xl {
+         //    column-gap: 21px;
+         // }
+         @include screen-l {
+            column-gap: 19px;
+         }
+      }
+      &-item {
+         cursor: pointer;
+         &.point {
+            opacity: 0.5;
+            cursor: auto;
+         }
+      }
+      svg {
+         cursor: pointer;
+      }
+      & .last-arrow {
+         rotate: 180deg;
+      }
+   }
+}
+
+
+
+.form-bg {
+   padding: 137px 182px 190px 184px;
+   background-image: url('../img/news/latest-news/form-bg/bg.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   letter-spacing: normal;
+   color: $text-white;
+   @include screen-xl {
+      padding: 125px 144px 178px 144px;
+   }
+   @media (max-width: 1000px) {
+      padding-left: 60px;
+      padding-right: 60px;
+   }
+   @include screen-l {
+      padding: 105px 0px 159px 109px;
+   }
+   @media (max-width: 730px) {
+      padding-left: 0;
+      display: flex;
+   }
+   @include screen-s {
+      padding-top: 80px;
+   }
+
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      height: 330px;
+      @include screen-xl {
+         height: 295px;
+      }
+      @include screen-l {
+         flex-direction: column;
+         align-items: center;
+         height: auto;
+      }
+   }
+
+   &__title {
+      max-width: 424px;
+      margin-bottom: 25px;
+      line-height: 51px;
+      align-self: flex-start;
+      @include screen-xl {
+         max-width: 360px;
+         line-height: initial;
+      }
+      @include screen-l {
+         align-self: normal;
+         margin-bottom: 19px;
+      }
+      @include screen-s {
+         max-width: 295px;
+         margin-bottom: 22px;
+      }
+   }
+
+   &__box {
+      align-self: flex-end;
+      max-width: 382px;
+      width: 100%;
+      @include screen-xl {
+         max-width: 345px;
+      }
+      @include screen-l {
+         align-self: normal;
+         max-width: 518px;
+      }
+   }
+
+   &__text {
+      max-width: 366px;
+      margin-bottom: 39px;
+      @include screen-xl {
+         max-width: 342px; 
+         margin-bottom: 27px;
+         margin-left: 3px;
+      }
+      @include screen-l {
+         max-width: 100%;
+         margin-left: 0;
+         margin-bottom: 40px;
+      }
+      @include screen-s {
+         margin-bottom: 37px;
+      }
+   }
+
+   &__form {
+      position: relative;
+   }
+
+   &__email {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 34px;
+      background-color: transparent;
+      color: $text-white;
+      width: 100%;
+      padding-right: 30px;
+      padding-bottom: 5px;
+      &::placeholder {
+         font-weight: 300;
+         font-size: 20px;
+         line-height: 34px;
+         color: $text-white;
+         opacity: 0.7;
+      }
+      @include screen-xl {
+         font-size: 16px;
+         line-height: 27px;
+         padding-bottom: 7px;
+         &::placeholder {
+            font-size: 16px;
+            line-height: 27px;
+         }
+      }
+      @include screen-l {
+         padding-bottom: 5px;
+      }
+   }
+
+   &__btn {
+      background-color: transparent;
+      position: absolute;
+      top: 5px;
+      right: 0;
+      svg {
+         opacity: 0.5;
+         stroke: #fff;
+         transition: all .3s ease-in-out;
+         &:hover {
+            opacity: 1;
+         }
+      }
+      @include screen-xl {
+         top: 7px;
+      }
+      @include screen-l {
+         top: 5px;
+      }
+   }
+}

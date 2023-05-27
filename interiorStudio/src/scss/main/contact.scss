@@ -1,0 +1,41 @@
+.body-contact {
+   background-color: $text-black;
+}
+
+
+.main-contact {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+
+
+.contact {
+   padding: 80px 0;
+   @include screen-l {
+      padding-bottom: 120px;
+   }
+
+   & .contact-block__wrapper {
+      width: 1052px;
+      @media (max-width: 1250px) {
+         width: 100%;
+         gap: 150px;
+      }
+      @media (max-width: 980px) {
+         gap: 0;
+      }
+   }
+
+   & .contact-block__box {
+      margin-top: 12px;
+      @media (max-width: 980px) {
+         margin-top: -39px;
+      }
+   }
+
+   & .contact-info__social {
+      margin: 0;
+   }
+}

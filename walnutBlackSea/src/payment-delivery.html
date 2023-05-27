@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_static/head.html',{
+"title":"Сторінка"
+})
+
+<body>
+	<div class="wrapper">
+		@@include("html/main/header.html",{})
+		<main class="main">
+			<div class="breadcrumbs">
+				<div class="breadcrumbs__body">
+					<a class="breadcrumbs__main" href="index.html">Главная</a>
+					<svg class='breadcrumbs__arrow'>
+						<use xlink:href='@img/sprite.svg#swiper-arrow'></use>
+					</svg>
+					<a class="breadcrumbs__current" href="#">Оплата и доставка</a>
+				</div>
+			</div>
+
+			<section class="payment">
+				<div class="payment__main-bg">
+					<div class="container">
+						<h1 class="payment__title h1-title">Оплата и доставка</h1>
+					</div>
+				</div>
+				<div class="payment__body">
+					<div class="tabs" data-tabs="tab">
+						<div class="tabs__container">
+							<div class="container">
+								<ul class="tabs__nav">
+									<li class="tabs__nav-item">
+										<button class="tabs__nav-btn" type="button">
+											<svg>
+												<use xlink:href='@img/sprite.svg#wallet'></use>
+											</svg>
+											<span>Оплата заказа</span>
+										</button>
+									</li>
+									<li class="tabs__nav-item">
+										<button class="tabs__nav-btn" type="button">
+											<svg>
+												<use xlink:href='@img/sprite.svg#lorry'></use>
+											</svg>
+											<span>Доставка партии</span>
+										</button>
+									</li>
+									<li class="tabs__nav-item">
+										<button class="tabs__nav-btn" type="button">
+											<svg>
+												<use xlink:href='@img/sprite.svg#return-goods'></use>
+											</svg>
+											<span>Возврат товара</span>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="container">
+							<div class="tabs__content">
+								<div class="tabs__panel">
+									<div class="tabs__block">
+										<h6 class="tabs__min-title">Способы оплаты</h6>
+										<div class="tabs__wrap">
+											<div class="tabs__holder">
+												<div class="tabs__box">
+													<div class="tabs__icon">
+														<img src="@img/icon/pay-icon-1.svg" alt="Icon">
+													</div>
+													<span>Безналичный расчет</span>
+												</div>
+												<p>
+													Вы можете выбрать “получить реквизиты” для дальнейшей оплаты на карту, или в
+													терминалах.
+												</p>
+											</div>
+											<div class="tabs__holder">
+												<div class="tabs__box">
+													<div class="tabs__icon">
+														<img src="@img/icon/pay-icon-2.svg" alt="Icon">
+													</div>
+													<span>Оплата с помощью банковской карты</span>
+												</div>
+												<p>
+													Оплатите Ваш заказ картой любого банка онлайн (LiqPay/Приват24)
+												</p>
+											</div>
+											<div class="tabs__holder">
+												<div class="tabs__box">
+													<div class="tabs__icon">
+														<img src="@img/icon/pay-icon-3.svg" alt="Icon">
+													</div>
+													<span>Наличный расчет</span>
+												</div>
+												<p>
+													Оплата заказов наложенным платежом в отделении Новой Почты, или наличными курьерами
+												</p>
+											</div>
+										</div>
+									</div>
+									<img class="tabs__image" src="@img/pay-del/payment.jpg" alt="Image">
+								</div>
+								<div class="tabs__panel orange">
+									<div class="tabs__block">
+										<h6 class="tabs__min-title">Способы оплаты</h6>
+										<div class="tabs__wrap">
+											<div class="tabs__holder">
+												<div class="tabs__box">
+													<div class="tabs__icon">
+														<img src="@img/icon/pay-icon-1.svg" alt="Icon">
+													</div>
+													<span>Безналичный расчет</span>
+												</div>
+												<p>
+													Вы можете выбрать “получить реквизиты” для дальнейшей оплаты на карту, или в
+													терминалах.
+												</p>
+											</div>
+											<div class="tabs__holder">
+												<div class="tabs__box">
+													<div class="tabs__icon">
+														<img src="@img/icon/pay-icon-2.svg" alt="Icon">
+													</div>
+													<span>Оплата с помощью банковской карты</span>
+												</div>
+												<p>
+													Оплатите Ваш заказ картой любого банка онлайн (LiqPay/Приват24)
+												</p>
+											</div>
+											<div class="tabs__holder">
+												<div class="tabs__box">
+													<div class="tabs__icon">
+														<img src="@img/icon/pay-icon-3.svg" alt="Icon">
+													</div>
+													<span>Наличный расчет</span>
+												</div>
+												<p>
+													Оплата заказов наложенным платежом в отделении Новой Почты, или наличными курьерами
+												</p>
+											</div>
+										</div>
+									</div>
+									<img class="tabs__image" src="@img/pay-del/payment.jpg" alt="Image">
+								</div>
+								<div class="tabs__panel purple">
+									<div class="tabs__block">
+										<h6 class="tabs__min-title">Способы оплаты</h6>
+										<div class="tabs__wrap">
+											<div class="tabs__holder">
+												<div class="tabs__box">
+													<div class="tabs__icon">
+														<img src="@img/icon/pay-icon-1.svg" alt="Icon">
+													</div>
+													<span>Безналичный расчет</span>
+												</div>
+												<p>
+													Вы можете выбрать “получить реквизиты” для дальнейшей оплаты на карту, или в
+													терминалах.
+												</p>
+											</div>
+											<div class="tabs__holder">
+												<div class="tabs__box">
+													<div class="tabs__icon">
+														<img src="@img/icon/pay-icon-2.svg" alt="Icon">
+													</div>
+													<span>Оплата с помощью банковской карты</span>
+												</div>
+												<p>
+													Оплатите Ваш заказ картой любого банка онлайн (LiqPay/Приват24)
+												</p>
+											</div>
+											<div class="tabs__holder">
+												<div class="tabs__box">
+													<div class="tabs__icon">
+														<img src="@img/icon/pay-icon-3.svg" alt="Icon">
+													</div>
+													<span>Наличный расчет</span>
+												</div>
+												<p>
+													Оплата заказов наложенным платежом в отделении Новой Почты, или наличными курьерами
+												</p>
+											</div>
+										</div>
+									</div>
+									<img class="tabs__image" src="@img/pay-del/payment.jpg" alt="Image">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="payment__items">
+						<div class="container">
+							<ul class="manufacturer__items">
+								<li class="manufacturer__item">
+									<div class="manufacturer__box">
+										<p>240</p>
+										<span>Га</span>
+									</div>
+									<p class="manufacturer__row">Cмешанных <br> садов</p>
+								</li>
+								<li class="manufacturer__item">
+									<div class="manufacturer__box">
+										<p>1</p>
+										<span>Га</span>
+									</div>
+									<p class="manufacturer__row">Тепличного <br> комплекса</p>
+								</li>
+								<li class="manufacturer__item">
+									<div class="manufacturer__box">
+										<p>10</p>
+										<span>Га</span>
+									</div>
+									<p class="manufacturer__row">Первая промышленная плантация <br> шиповника в Украине</p>
+								</li>
+								<li class="manufacturer__item">
+									<div class="manufacturer__box">
+										<p>80</p>
+										<span>%</span>
+									</div>
+									<p class="manufacturer__row">Приживаемости <br> саженцев</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="main-target page-payment">
+				<div class="video" data-src="https://www.youtube.com/embed/RAbzslym6o0?autoplay=1">
+					<div class="container">
+						<div class="video__body">
+							<h2 class="main-target__title h2-title">
+								Наша главная цель - получить максимальную прибыль с одного гектара
+							</h2>
+							<button class="video__button">
+								<svg>
+									<use xlink:href='@img/sprite.svg#video-btn'></use>
+								</svg>
+							</button>
+							<p class="main-target__descr">Cмотреть видео о производстве</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		@@include('html/main/footer.html',{})
+	</div>
+	@@include('html/_static/script.html',{})
+</body>
+
+</html>

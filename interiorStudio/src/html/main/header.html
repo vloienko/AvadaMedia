@@ -1,0 +1,150 @@
+<!-- для сторінки news, one-news, projects, about додати клас black -->
+
+<header class="header black" id="header">
+   <div class="container">
+      <div class="header__wrapper">
+         <a class="header__logo" href="#">Logo</a>
+         <div class="header__body">
+            <div class="header__menu menu">
+               <div class="menu__icon"></div>
+               <span class="menu__descr">Menu</span>
+               <nav class="menu__body">
+                  <ul class="menu__list">
+                     <li><a data-goto=".page__section-1" class="menu__link" href="#">Home</a></li>
+                     <li><a data-goto=".page__section-2" class="menu__link" href="#">Projects</a></li>
+                     <li><a data-goto=".page__section-3" class="menu__link" href="#">About us</a></li>
+                     <li><a data-goto=".page__section-4" class="menu__link" href="#">Blog</a></li>
+                     <li><a data-goto=".page__section-5" class="menu__link" href="#">Contacts</a></li>
+                  </ul>
+                  <a href="#popup" class="header__button popup__button popup-link">Send Request</a>
+                  <div class="menu__contact contact-info">
+							<div class="contact-info__social">
+								<a class="contact-info__link" href="#">Fb</a>
+								<a class="contact-info__link" href="#">In</a>
+								<a class="contact-info__link" href="#">Be</a>
+							</div>
+							
+							<div class="contact-info__city">
+								<div class="contact-info__city-box">
+									<img class="contact-info__city-location" src="@img/main/space/location.svg" alt="Location">
+									<span class="contact-info__city-current">Berlin</span>
+								</div>
+								<ul class="contact-info__city-list">
+									<li class="contact-info__city-item" data-lang="Berlin">Berlin</li>
+									<li class="contact-info__city-item" data-lang="Kyiv">Kyiv</li>
+									<li class="contact-info__city-item" data-lang="Lviv">Lviv</li>
+									<li class="contact-info__city-item" data-lang="Kharkiv">Kharkiv</li>
+								</ul>
+							</div>
+							<div class="contact-info__communication">
+								<a class="contact-info__item" href="tel:380983527547">+380983527547</a>
+								<a class="contact-info__item" href="mailto:info@gmail.com">E: info@gmail.com</a>
+							</div>
+						</div>
+               </nav>
+            </div>
+            <div class="header__block">
+               <div class="header__language">
+                  <span class="header__language-current">En</span>
+                  <ul class="header__language-list">
+                     <li class="header__language-item" data-lang="En">En</li>
+                     <li class="header__language-item" data-lang="Ua">Ua</li>
+                  </ul>
+               </div>
+               <a href="#popup" class="header__button popup__button popup-link">Send Request</a>
+            </div>
+         </div>
+      </div>
+
+      <div id="popup" class="popup">
+         <div class="popup__body">
+            <a class="popup__close close-popup" href="#header">
+               <span></span>
+            </a>
+            <div class="popup__content">
+               <form class="popup__form" action="#">
+                  <div class="popup__wrapper">
+                     <h3 class="popup__title">Calculate the cost of work</h3>
+                     <div class="popup__items">
+                        <input class="popup__item" type="text" name="name" placeholder="Name" required>
+                        <input class="popup__item" type="text" name="last-name" placeholder="Last name" required>
+                        <input class="popup__item" type="tel" name="phone" placeholder="Phone" required>
+                        <input class="popup__item" type="text" name="city" placeholder="Your city" required>
+                        <input class="popup__item" type="email" name="email" placeholder="Email" required>
+                        <select class="popup__item" name="property" required>
+                           <option value="" selected disabled>Property type</option>
+                           <option value="private">Private</option>
+                           <option value="collective">Collective</option>
+                           <option value="state">State</option>
+                        </select>
+                        <textarea class="popup__item" name="comment" placeholder="Your comment"></textarea>
+                     </div>
+                  </div>
+                  <div class="popup__wrapper">
+                     <span class="popup__area">Area (m2)</span>
+                     <div class="popup__radio-block">
+                        <div class="popup__radio-box">
+                           <label for="1">to 50</label>
+                           <input type="radio" id="1" name="area" value="1">
+                        </div>
+                        <div class="popup__radio-box">
+                           <label for="2">50-150</label>
+                           <input type="radio" id="2" name="area" value="2" checked>
+                        </div>
+                        <div class="popup__radio-box">
+                           <label for="3">150-250</label>
+                           <input type="radio" id="3" name="area" value="3">
+                        </div>
+                        <div class="popup__radio-box">
+                           <label for="4">250-400</label>
+                           <input type="radio" id="4" name="area" value="4">
+                        </div>
+                        <div class="popup__radio-box">
+                           <label for="5">400-600</label>
+                           <input type="radio" id="5" name="area" value="5">
+                        </div>
+                        <div class="popup__radio-box">
+                           <label for="6">600-800</label>
+                           <input type="radio" id="6" name="area" value="6">
+                        </div>
+                        <div class="popup__radio-box">
+                           <label for="7">800-1000</label>
+                           <input type="radio" id="7" name="area" value="7">
+                        </div>
+                        <div class="popup__radio-box">
+                           <label for="8">1000+</label>
+                           <input type="radio" id="8" name="area" value="8">
+                        </div>
+                     </div>
+                     <div class="popup__holder">
+                        <div class="popup__file">
+                           <input class="popup__file-input" id="form-file" type="file" name="file">
+                           <div class="popup__file-text">
+                              <div class="popup__file-btn">+</div>
+                              <p class="popup__file-descr">
+                                 Attach your file <br>
+                                 <span>File size not more than 10 MB</span>
+                              </p>
+                           </div>
+                        </div>
+                        <button class="popup__submit popup__button" type="submit">Send Request</button>
+                     </div>
+                     <p class="popup__text">
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                     </p>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
+
+<div class="preloader" id="preloader">
+   <div class="preloader__loader">
+      <span class="preloader__percents">
+         <span class="hi">HI</span>
+         <span id="percents">0%</span>
+      </span>
+   </div>
+</div>

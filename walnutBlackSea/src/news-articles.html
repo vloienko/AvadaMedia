@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_static/head.html',{
+	"title":"Сторінка"
+	})
+	<body>
+		<div class="wrapper">
+			@@include("html/main/header.html",{})
+			<main class="main">
+				<div class="breadcrumbs gray">
+					<div class="breadcrumbs__body">
+						<a class="breadcrumbs__main" href="index.html">Главная</a>
+						<svg class='breadcrumbs__arrow'>
+							<use xlink:href='@img/sprite.svg#swiper-arrow'></use>
+						</svg>
+						<a class="breadcrumbs__current" href="#">Новости и статьи</a>
+					</div>
+				</div>
+
+				<section class="all-events">
+					<div class="container">
+						<div class="all-events__body">
+							<h2 class="all-events__title h2-title">Новости и статьи</h2>
+							<h4 class="all-events__sub-title h4-sub-title">Свежие новости и полезная информация</h4>
+							<div class="all-events__block">
+								<div class="all-events__image">
+									<img src="@img/news/news-articles.jpg" alt="Images news">
+								</div>
+								<div class="news__content">
+									<a class="news__content-date all-events__news-date" href="#">12.04.2019</a>
+									<a class="all-events__news-title" href="#">
+										<h5>Центр поддержки экспорта, в студии Павел Тулба</h5>
+									</a>
+									<p class="all-events__text">
+										Сельскохозяйственный обслуживающий кооператив “Орех Причерноморья” предлагает своим клиентам выгодные условия сотрудничества.
+									</p>
+									<p class="all-events__text">
+										Ореховый бизнес – один из наиболее перспективных в Украине. Ежегодная нехватка продукта в Европе составляет 100 000 тонн. У Вас есть возможность зарабатывать десятки тысяч долларов в год всего на нескольких гектарах земли.
+									</p>
+									<a class="news__content-btn" href="#">
+										<span>Читать</span>
+										<svg>
+											<use xlink:href='@img/sprite.svg#news-arrow'></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							@@include('html/components/news.html',{})
+							<div class="all-events__video">
+								@@include('html/components/videoProject.html',{})
+							</div>
+							<button class="all-events__button button-white">Посмотреть еще</button>
+						</div>
+					</div>
+				</section>
+
+			</main>
+			@@include('html/main/footer.html',{})
+		</div>
+		@@include('html/_static/script.html',{})
+	</body>
+</html>

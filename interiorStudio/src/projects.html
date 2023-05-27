@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_static/head.html',{
+	"title":"Projects"
+	})
+	<body>
+		<div class="wrapper">
+			@@include("html/main/header.html",{})
+			<main class="main">
+				
+				<section class="latest-news our-projects">
+					<div class="container">
+						<div class="latest-news__body">
+							<div class="latest-news__box our-projects__box">
+								<h2 class="latest-news__title h2-title">Our Projects</h2>
+								<div class="our-projects__block">
+									<p class="our-projects__sub-title main-text">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus ligula. <br> Nunc ante felis, aliquam eu enim sed, ornare pretium velit.
+									</p>
+									<div class="latest-news__navbar">
+										<button type="button" class="latest-news__navbar-btn active">House</button>
+										<button type="button" class="latest-news__navbar-btn">Apartments</button>
+										<button type="button" class="latest-news__navbar-btn">Commerce</button>
+										<button type="button" class="latest-news__navbar-btn">Architecture</button>
+									</div>
+									<div class="latest-news__select-wrapper">
+										<select class="latest-news__navbar-mobile" name="#">
+											<option class="latest-news__navbar-btn" value="Apartments">Apartments</option>
+											<option class="latest-news__navbar-btn" value="Blog">House</option>
+											<option class="latest-news__navbar-btn" value="News">Commerce</option>
+											<option class="latest-news__navbar-btn" value="Advice">Architecture</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="projects__body our-projects__gallery">
+								<a class="projects__block" href="#"></a>
+								<a class="projects__block" href="#">
+									<div class="projects__block-info our-projects__info">
+										<span class="projects__block-text">Lodz</span>
+										<span class="projects__block-text">16.10.2018</span>
+										<span class="projects__block-text">80 sq.m</span>
+									</div>
+									<div class="projects__block-main">
+										<h4 class="projects__block-subtitle">Residence by the lighthouse</h4>
+									</div>
+								</a>
+								<a class="projects__block" href="#"></a>
+								<a class="projects__block" href="#"></a>
+								<a class="projects__block" href="#"></a>
+								<a class="projects__block" href="#"></a>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="photo-gallery projects">
+					<div class="container">
+						<div class="photo-gallery__wrapper">
+							<div class="photo-gallery__block">
+								<img class="photo-gallery__block-img" src="@img/main/photo-gallery/img-1.png" alt="Image">
+								<img class="photo-gallery__block-img" src="@img/main/photo-gallery/img-2.png" alt="Image">
+								<img class="photo-gallery__block-img" src="@img/main/photo-gallery/img-3.png" alt="Image">
+								<img class="photo-gallery__block-img" src="@img/main/photo-gallery/img-4.png" alt="Image">
+								<img class="photo-gallery__block-img" src="@img/main/photo-gallery/img-5.png" alt="Image">
+								<img class="photo-gallery__block-img" src="@img/main/photo-gallery/img-6.png" alt="Image">
+								<img class="photo-gallery__block-img" src="@img/main/photo-gallery/img-1.png" alt="Image">
+								<img class="photo-gallery__block-img" src="@img/main/photo-gallery/img-2.png" alt="Image">
+								<img class="photo-gallery__block-img" src="@img/main/photo-gallery/img-3.png" alt="Image">
+								<img class="photo-gallery__block-img" src="@img/main/photo-gallery/img-4.png" alt="Image">
+							</div>
+							<div class="photo-gallery__body">
+								<h2 class="photo-gallery__title">Lorem ipsum dolor <br> sit amet, consectetur adipiscing elit.</h2>
+								<div class="photo-gallery__box">
+									<p class="photo-gallery__text">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.
+									</p>
+									<a class="photo-gallery__btn popup__button" href="#">Make request</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			</main>
+			@@include('html/main/footer.html',{})
+		</div>
+		@@include('html/_static/script.html',{})
+	</body>
+</html>

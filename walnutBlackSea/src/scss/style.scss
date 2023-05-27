@@ -1,0 +1,27 @@
+//<SETTINGS>========================================
+@import "_fonts/fonts";
+@import "_base/null";
+@import "_base/helpers";
+@import "_base/mixins";
+@import "_base/basic";
+//<SETTINGS>========================================
+
+//<HEDER + FOOTER STYLE>============================
+@import "main/header";
+@import "main/footer";
+@import "main/components";
+//</HEDER + FOOTER STYLE>===========================
+
+//<PAGES STYLE>=====================================
+@import "pages/index";
+@import "pages/gallery";
+@import "pages/news-articles";
+@import "pages/payment-delivery";
+@import "pages/one-news";
+@import "pages/corporate";
+@import "pages/company";
+@import "pages/product-catalog";
+@import "pages/card-product";
+// @import "pages/";
+// @import "pages/";
+//</PAGES STYLE>====================================

@@ -1,0 +1,458 @@
+.company-ph {
+   background-image: url('../img/about/company-ph/bg.jpg');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   margin-top: 96px;
+   @include adaptiveValue('margin-bottom', 140, 80);
+   letter-spacing: normal;
+   color: $text-white;
+   height: calc(100vh - 96px);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   @include screen-xl {
+      height: calc(100vh - 89px);
+      margin-top: 89px;
+   }
+   @include screen-s {
+      height: calc(100vh - 62px);
+      margin-top: 62px;
+   }
+
+   &__body {
+      max-width: 383px;
+      text-align: center;
+   }
+
+   &__title {
+      margin-bottom: 20px;
+   }
+
+   &__text {
+      opacity: 1;
+   }
+}
+
+
+
+.experience {
+   letter-spacing: normal;
+   @include adaptiveValue('margin-bottom', 140, 80);
+
+   &__body {
+      padding: 0px 0px 40px 66px;
+      @media (max-width: 1250px) {
+         padding: 0;
+      }
+   }
+
+   &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+      @include adaptiveValue('margin-bottom', 140, 80);
+      position: relative;
+      @include screen-xl {
+         flex-direction: column;
+         align-items: flex-start;
+      }
+      
+      &::before {
+         position: absolute;
+         content: '';
+         top: 0;
+         left: -50%;
+         width: 10%;
+         height: 100%;
+         background-color: #fff;
+         z-index: 2;
+      }
+            
+      &-text {
+         margin-left: 134px;
+         max-width: 383px;
+         position: relative;
+         z-index: 3;
+         height: 248px;
+         @media (max-width: 1250px) {
+            margin-left: 0;
+         }
+      }
+   }
+
+   &__title {
+      margin-bottom: 12px;
+   }
+
+   &__text {
+      margin-bottom: 43px;
+      opacity: 1;
+   }
+
+   &__switches {
+      height: 11px;
+      justify-content: flex-start;
+      margin-top: 0;
+      margin-right: 0;
+      @include screen-xl {
+         position: static;
+      }
+		& .swiper-button-prev,
+		& .swiper-button-next {
+			color: rgba(130, 130, 130, 0.5);
+		}
+		& .swiper-button-prev::after,
+		& .swiper-button-next::after {
+			color: rgba(130, 130, 130, 0.5);
+		}
+		& .swiper-scrollbar-drag {
+			background-color: rgba(130, 130, 130, 0.5);
+		}
+      .progress {
+         width: 227px !important;
+         margin: 0 14.5px;
+		}
+		& .swiper-scrollbar {
+			background-color: rgba(130, 130, 130, 0.32);
+         width: 227px !important;
+		}
+	}
+
+   &__slider {
+      max-width: 598px;
+      margin: 0;
+      position: relative;
+      z-index: 1;
+      overflow: visible;
+      @include screen-m {
+         max-width: 460px;
+      }
+      @media (max-width: 400px) {
+         max-width: 380px;
+      }
+      & .swiper-slide {
+         max-width: 552px;
+      }
+      &-img {
+         width: 100%;
+         max-width: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
+   }
+
+   &__bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 50px;
+      position: relative;
+      @include screen-l {
+         display: flex;
+         flex-direction: column-reverse;
+      }
+      &-images {
+         max-width: 516px;
+         width: 100%;
+      }
+   
+      &-text {
+         margin-top: 6px;
+      }
+   }
+
+   &__advantages {
+      max-width: 311px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 48px;
+      row-gap: 45px;
+      margin-bottom: 73px;
+
+      &-box {
+         span {
+            font-weight: 700;
+            font-size: 56px;
+            line-height: 68px;
+            display: inline-block;
+            margin-bottom: 6px;
+         }
+         p {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 18px;
+         }
+      }
+   }
+
+   &__description {
+      max-width: 382px;
+      opacity: 1;
+   }
+
+   &__small-img {
+      position: absolute;
+      bottom: -40px;
+      right: -63px;
+      @media (max-width: 1150px) {
+         display: none;
+      }
+   }
+}
+
+
+
+.founder {
+   letter-spacing: normal;
+   background-color: #fff;
+   @include adaptiveValue('padding-bottom', 144, 80);
+   position: relative;
+   z-index: 10;
+
+   &__body {
+      margin: 0px 82px 0px 135px;
+      @media (max-width: 1250px) {
+         margin: 0;
+      }
+   }
+
+   &__content, &__block {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 50px;
+      @include screen-xl {
+         align-items: center;
+      }
+      @include screen-l {
+         flex-direction: column;
+      }
+   }
+
+   &__content {
+      @include adaptiveValue('margin-bottom', 100, 60);
+   }
+
+   &__box {
+      margin-top: 66px;
+      margin-left: 65px;
+      @include screen-xl {
+         margin-top: 0;
+      }
+      @include screen-m {
+         margin-left: 35px;
+      }
+   }
+
+   &__title {
+      margin-bottom: 22px;
+      @include screen-m {
+         margin-bottom: 12px;
+      }
+   }
+
+   &__sub-title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 49px;
+      @include screen-m {
+         margin-bottom: 25px;
+      }
+   }
+
+   &__quote {
+      margin-left: -50px;
+      @include screen-xl {
+         padding: 0px 0px 0px 50px;
+         margin: 0px 0px 0px -50px;
+         max-width: 100%;
+      }
+      @include screen-m {
+         padding: 0px 0px 0px 25px;
+         margin: 0px 0px 0px -25px;
+      }
+   }
+
+   &__photo {
+      max-width: 516px;
+      width: 100%;
+      @include screen-xl {
+         max-width: 315px;
+      }
+      @include screen-l {
+         max-width: 100%;
+      }
+   }
+
+   &__team {
+      max-width: 315px;
+      width: 100%;
+      margin-top: -176px;
+      @include screen-xl {
+         margin-top: 0;
+      }
+      @include screen-l {
+         order: 2;
+         max-width: 100%;
+      }
+   }
+
+   &__wrap {
+      max-width: 516px;
+      @include screen-l {
+         order: 1;
+      }
+   }
+
+   &__items {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 409px;
+      margin-bottom: 54px;
+      gap: 30px;
+      @include screen-m {
+         margin-bottom: 25px;
+      }
+   }
+
+   &__item {
+      span {
+         font-weight: 700;
+         font-size: 56px;
+         line-height: 68px;
+         display: inline-block;
+         margin-bottom: 6px;
+      }
+      p {
+         font-weight: 300;
+         font-size: 14px;
+         line-height: 18px;
+      }
+   }
+
+   &__descr {
+      opacity: 1;
+   }
+}
+
+
+
+.white-gallery.black {
+   background-color: $text-black;
+   color: $text-white;
+   & .white-gallery__image {
+      z-index: 1;
+   }
+}
+
+
+
+.about-email {
+   @include adaptiveValue('padding-top', 136, 80);
+   @include adaptiveValue('padding-bottom', 188, 80);
+   letter-spacing: normal;
+   background-color: #fff;
+   position: relative;
+   z-index: 10;
+   @media (max-width: 530px) {
+      padding-bottom: 130px;
+   }
+
+   &__body {
+      padding: 0px 150px 0px 136px;
+      display: flex;
+      justify-content: space-between;
+      height: 334px;
+      @media (max-width: 1150px) {
+         padding: 0 40px;
+      }
+      @include screen-xl {
+         flex-direction: column;
+      }
+      @include screen-m {
+         align-items: center;
+      }
+      @media (max-width: 450px) {
+         padding: 0 20px;
+      }
+   }
+
+   &__box-top {
+      max-width: 424px;
+      align-self: flex-start;
+      @include screen-m {
+         align-self: center;
+         max-width: 100%;
+      }
+   }
+
+   &__title {
+      margin-bottom: 124px;
+      line-height: 51px;
+      @include screen-xl {
+         margin-bottom: 40px;
+         line-height: initial;
+      }
+   }
+
+   &__box-bottom {
+      max-width: 366px;
+      align-self: flex-end;
+      @include screen-m {
+         align-self: center;
+         max-width: 100%;
+      }
+   }
+
+   &__text {
+      margin-bottom: 24px;
+   }
+
+   & .form-bg__form {
+      max-width: 382px;
+      @include screen-m {
+         max-width: 100%;
+      }
+   }
+
+   & .form-bg__email {
+      border-color: #515151;
+      color: $text-black;
+      opacity: 0.7;
+      &::placeholder {
+         color: $text-black;
+         opacity: 0.7;
+      }
+
+   }
+
+   & .form-bg__btn {
+      svg {
+         opacity: 1;
+         stroke: #515151;
+         &:hover {
+            stroke: $text-black;
+            scale: 1.5;
+         }
+      }
+   }
+
+   & .contact-block__box {
+      margin-right: 6px;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 0;
+      @media (max-width: 450px) {
+         display: flex;
+      }
+   }
+
+   & .contact-info__social {
+      margin: 0;
+      gap: 12.5px;
+   }
+}

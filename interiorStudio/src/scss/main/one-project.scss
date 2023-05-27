@@ -1,0 +1,361 @@
+.residence {
+   letter-spacing: normal;
+   background-image: url('../img/one-project/residence/bg.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   height: 100vh;
+   color: $text-white;
+   display: grid;
+   grid-template-columns: 1fr 0.545fr;
+   align-items: center;
+
+   @include screen-xl {
+      grid-template-columns: 1fr 0.312fr;
+   }
+
+   @include screen-l {
+      grid-template-columns: 1fr 0.082fr;
+   }
+
+   @include screen-s {
+      grid-template-columns: 1fr;
+   }
+
+   &__body {
+      display: flex;
+      align-items: center;
+      height: 100vh;
+      position: relative;
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+   }
+
+   &__title {
+      margin-bottom: 21px;
+      max-width: 538px;
+
+      br {
+         display: none;
+      }
+
+      @include screen-xl {
+         br {
+            display: block;
+         }
+      }
+
+      @include screen-l {
+         margin-bottom: 23px;
+      }
+
+      @include screen-s {
+         margin-bottom: 14px;
+      }
+   }
+
+   &__text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 68px;
+      max-width: 462px;
+
+      @include screen-xl {
+         margin-bottom: 55px;
+      }
+
+      @include screen-l {
+         margin-bottom: 36px;
+      }
+
+      @include screen-s {
+         margin-bottom: 35px;
+      }
+   }
+
+   &__block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+
+      @include screen-s {
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 24px;
+      }
+   }
+
+   &__items {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 13px;
+
+      img {
+         max-width: 100%;
+      }
+
+      span {
+         letter-spacing: 0.06em;
+         opacity: 0.7;
+      }
+   }
+
+   &__social {
+      display: flex;
+      align-items: center;
+      gap: 100px;
+      position: absolute;
+      left: -145px;
+      bottom: 40px;
+
+      span {
+         font-weight: 500;
+         font-size: 14px;
+         line-height: 24px;
+      }
+
+      @include screen-xxl {
+         left: 0;
+      }
+
+      @include screen-xl {
+         bottom: 32.52px;
+         left: -104px;
+         gap: 59px;
+      }
+
+      @media (max-width: 900px) {
+         left: 0;
+      }
+
+      @include screen-l {
+         gap: 32px;
+         left: -76px;
+      }
+
+      @media (max-width: 700px) {
+         left: 0;
+      }
+
+      @include screen-s {
+         bottom: 24.52px;
+         gap: 16px;
+      }
+   }
+
+   &__box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      &-link {
+         width: 24.77px;
+         height: 24px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border: 1px solid rgba(255, 255, 255, 0.32);
+         border-radius: 37.1613px;
+         transition: all .3s ease-in-out;
+
+         &:hover {
+            border-color: #fff;
+            background-color: rgba(255, 255, 255, 0.3);
+         }
+      }
+   }
+}
+
+
+
+.residence-content {
+   padding: 140px 0;
+   letter-spacing: normal;
+   @include screen-xl {
+      padding: 124px 0;
+   }
+   @include screen-l {
+      padding: 104px 0;
+   }
+   @include screen-s {
+      padding: 80px 0;
+   }
+
+   &__body {
+      margin-bottom: 140px;
+      @include screen-xl {
+         max-width: 602px;
+         margin-bottom: 125px;
+      }
+      @include screen-l {
+         margin-bottom: 104px;
+         max-width: 520px;
+      }
+      @include screen-s {
+         margin-bottom: 80px;
+      }
+   }
+
+   &__title {
+      @include screen-xl {
+         margin-bottom: 13px;
+      }
+      @include screen-l {
+         margin-bottom: 21px;
+      }
+   }
+
+   &__text {
+      margin-bottom: 43px;
+   }
+
+   &__btn {
+      &::before,
+      &::after {
+         background-color: rgba(49, 49, 49, 0.2);
+      }
+   }
+
+   &__gallery {
+      margin-bottom: 80px;
+      @include screen-xl {
+         margin-bottom: 64px;
+      }
+      @include screen-l {
+         margin-bottom: 56px;
+      }
+      @include screen-s {
+         margin-bottom: 48px;
+      }
+   }
+
+   &__image {
+      max-width: 100%;
+      object-fit: cover;
+      object-position: center;
+      @include screen-s {
+         height: 392px;
+      }
+
+      &:nth-child(1) {
+         grid-column: span 2;
+         @include screen-m {
+            grid-column: span 1;
+         }
+         @include screen-s {
+            height: auto;
+         }
+      }
+
+      &:nth-child(4) {
+         grid-column: span 2;
+         @include screen-xl {
+            height: 454px;
+         }
+         @include screen-l {
+            height: 334px;
+         }
+         @include screen-m {
+            grid-column: span 1;
+         }
+         @include screen-s {
+            height: auto;
+         }
+      }
+   }
+
+   &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 204px;
+      height: 48px;
+      border: 1px solid rgba(8, 8, 8, 0.32);
+      background-color: #fff;
+      letter-spacing: 0.06em;
+      margin: 0 auto;
+      transition: all .3s ease-in-out;
+      &:hover {
+         background-color: rgba(8, 8, 8, 0.32);
+         color: $text-white;
+      }
+      @include screen-s {
+         width: 183px;
+         height: 42px;
+      }
+   }
+}
+
+
+
+.proportions {
+   letter-spacing: normal;
+   color: $text-white;
+   margin-top: -2px;
+
+   &__black {
+      background-color: $text-black;
+   }
+
+   &__white {
+      background-color: #fff;
+      height: 206px;
+      @include screen-xl {
+         display: none;
+      }
+   }
+
+   &__body {
+      text-align: center;
+      margin-bottom: -206px;
+      @include screen-xl {
+         margin-bottom: 0;
+      }
+   }
+
+   &__sub-title {
+      font-weight: 700;
+      font-size: 8px;
+      line-height: 14px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: $text-gray;
+      display: inline-block;
+      margin-bottom: 15px;
+      @include screen-xl {
+         margin-bottom: 13px;
+      }
+      @include screen-l {
+         margin-bottom: 11px;
+      }
+      @include screen-s {
+         margin-bottom: 6px;
+      }
+   }
+
+   &__title {
+      margin-bottom: 127px;
+      @include screen-xl {
+         margin-bottom: 96px;
+      }
+      @include screen-l {
+         margin-bottom: 72px;
+      }
+      @include screen-s {
+         margin-bottom: 48px;
+      }
+   }
+
+   &__image {
+      max-width: 100%;
+      object-fit: cover;
+      object-position: center;
+   }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_static/head.html',{
+	"title":"Сторінка"
+	})
+	<body class="body-404">
+		<div class="wrapper">
+			@@include("html/main/header.html",{})
+			<main class="main">
+
+				<section class="not-found">
+					<div class="container">
+						<div class="not-found__body">
+							<div>
+								<h2 class="not-found__title h2-title">Page not found</h2>
+								<p class="not-found__text main-text">Something went wrong. Page not found</p>
+								<a class="not-found__btn discover-more" href="#">go to main</a>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			</main>
+			@@include('html/main/footer.html',{})
+		</div>
+		@@include('html/_static/script.html',{})
+	</body>
+</html>

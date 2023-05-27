@@ -1,0 +1,478 @@
+.header {
+   position: relative;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 10;
+   background-color: #fff;
+
+   @include screen-xl {
+      position: fixed;
+   }
+
+   &__panel {
+      background-color: rgba(245, 245, 245, 0.5);
+      height: 38px;
+      display: flex;
+      align-items: center;
+
+      &-wrapper {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+      }
+   }
+
+   &__content-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 753px;
+      width: 100%;
+      @include screen-xl {
+         max-width: 530px;
+      }
+      @include screen-l {
+         max-width: 100%;
+         justify-content: flex-end;
+      }
+      @media (max-width: 480px) {
+         width: max-content;
+      }
+   }
+
+   &__discount {
+      font-weight: 600;
+      line-height: 17px;
+      color: $green;
+      @include screen-l {
+         display: none;
+      }
+   }
+
+   &__box {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      @include screen-xl {
+         gap: 30px;
+      }
+   }
+
+   &__authorization {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      @include screen-xl {
+         gap: 15px;
+      }
+      @media (max-width: 480px) {
+         display: none;
+         &.mobile-menu {
+            display: flex;
+         }
+      }
+      &-link {
+         svg {
+            width: 11px;
+            height: 11px;
+            fill: $lightGreen;
+            margin-right: 2px;
+         }
+         span {
+            font-family: 'Raleway';
+            font-size: 13px;
+            line-height: 15px;
+            letter-spacing: 0.02em;
+            color: $main;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 2px;
+            transition: all .3s ease-in-out;
+         }
+         &:hover span {
+            border-color: $lightGreen;
+         }
+      }
+      
+   }
+
+   &__language {
+      width: 30px;
+      position: relative;
+      display: inline-block;
+      padding: 5px 13px 5px 0px;
+      cursor: pointer;
+      font-family: 'Raleway';
+      font-size: 13px;
+      line-height: 15px;
+      letter-spacing: 0.02em;
+      color: $black;
+      @include screen-s {
+         width: 27px;
+      }
+      &::after {
+         position: absolute;
+         top: 20%;
+         right: 0;
+         content: url('../img/icon/lang-arrow.svg');
+         width: 8px;
+         height: 5px;
+      }
+   
+      &-list {
+         position: absolute;
+         top: 100%;
+         left: 0;
+         z-index: 1;
+         display: none;
+      }
+   
+      &-list.active {
+         display: block;
+      }
+   
+      &-item {
+         display: block;
+         padding: 5px 13px 5px 0px;
+         cursor: pointer;
+         &:hover {
+            color: $lightGreen;
+         }
+      }
+   }
+
+   &__contact {
+      background-color: #fff;
+      height: 85px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      display: flex;
+      align-items: center;
+      @include screen-xl {
+         border-bottom: none;
+      }
+      &-wrapper {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         @include screen-s {
+            margin-bottom: 4px;
+         }
+      }
+      @media (max-width: 480px) {
+         height: 80px;
+      }
+   }
+
+   &__holder {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      @include screen-m {
+         flex-direction: row-reverse;
+         justify-content: space-between;
+      }
+      @media (max-width: 480px) {
+         width: calc(100% - 30px);
+         gap: 0px;
+      }
+   }
+
+   &__block {
+      display: flex;
+      align-items: center;
+
+      &-box {
+         display: flex;
+         align-items: center;
+         gap: 32px;
+         margin-right: 93px;
+         @include screen-xl {
+            margin-right: 60px;
+            &.mobile-menu {
+               margin: 0;
+            }
+         }
+         @media (max-width: 875px) {
+            display: none;
+            &.mobile-menu {
+               display: flex;
+            }
+         }
+         @include screen-m {
+            &.mobile-menu {
+               display: none;
+            }
+         }
+      }
+   
+      &-call {
+         display: flex;
+         align-items: center;
+         gap: 15px;
+         margin-right: 64px;
+         @include screen-xl {
+            margin-right: 30px;  
+         }
+         @media (max-width: 480px) {
+            display: none;
+         }
+         span {
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 0.02em;
+            color: #8A8A8A;
+            max-width: 141px;
+            @include screen-xl {
+               display: none;
+            }
+         }
+         
+      }
+   }
+
+   &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 148px;
+      height: 42px;
+      font-family: 'Raleway';
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 15px;
+      &.mobile {
+         display: none;
+         @media (max-width: 480px) {
+            display: flex;
+            color: $green;
+            background-color: transparent;
+            border-bottom: 1px solid $green;
+            padding: 0px 0px 2px 0px;
+            width: auto;
+            height: auto;
+            white-space: nowrap;
+         }
+         @include screen-s {
+            margin-top: 3px;
+            margin-right: 24px;
+         }
+      }
+     
+   }
+
+   &__basket {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      svg {
+         width: 29px;
+         height: 24px;
+      }
+   }
+
+   &__body {
+      background-color: #fff;
+      height: 56px;
+      display: flex;
+      align-items: flex-end;
+      @include screen-xl {
+         height: 0;
+      }
+   }
+
+   &__menu {
+      &-white, &-gray {
+         display: none;
+         @include screen-xl {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+         }
+         @include screen-s {
+            padding: 0 12px;
+         }
+      }
+      @include screen-xl {
+         &-white {
+            background-color: #fff;
+            height: 59px;
+         }
+         &-gray {
+            background-color: rgba(245, 245, 245, 0.5);
+            height: 42px;
+            margin-bottom: 20px;
+         }
+      }
+      @media (max-width: 480px) {
+         &-gray {
+            margin-bottom: 4px;
+         }
+      }
+   }
+}
+
+
+
+.menu {
+
+   &__icon {
+      display: none;
+
+      @include screen-xl {
+         display: block;
+         position: relative;
+         width: 19px;
+         height: 17px;
+         cursor: pointer;
+         
+         &.close {
+            z-index: 10;
+            width: 16px;
+         }
+
+         & span,
+         &::before,
+         &::after {
+            left: 0;
+            position: absolute;
+            height: 2.6px;
+            width: 100%;
+            transition: all .3s ease 0s;
+            background-color: #000;
+         }
+         &::before,
+         &::after {
+            content: "";
+         }
+         &::before {
+            top: 0;
+         }
+         &::after {
+            width: 13px;
+            bottom: 0; 
+         }
+         & span {
+            top: 50%;
+            transform: scale(1) translate(0px, -50%);
+         }
+         &.close span {
+            display: none;
+         }
+         &.close::before {
+            width: 19px;
+            top: 50%;
+            transform: rotate(-45deg) translate(0px, -50%);
+         }
+         &.close::after {
+            width: 19px;
+            bottom: 50%;
+            transform: rotate(45deg) translate(0px, 50%);
+         }
+      }
+   }
+
+   &__body {
+      @include screen-xl {
+         position: fixed;
+         top: -100%;
+         left: 0;
+         width: 100%;
+         height: max-content;
+         background-color: #fff;
+         transition: all .6s ease-in-out;
+         overflow: auto;
+         &._active {
+            top: 0;
+         }
+      }
+   }
+
+   &__list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      max-width: 1152px;
+      margin: 0 auto;
+      margin-bottom: 15px;
+      @include screen-xl {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         margin-bottom: 0;
+      }
+      @media (max-width: 480px) {
+         grid-template-columns: 1fr;
+         gap: 0px;
+      }
+   }
+
+   &__link {
+      font-family: 'Raleway';
+      font-size: 15px;
+      line-height: 18px;
+      letter-spacing: 0.02em;
+      color: $darkBlue;
+      transition: all .3s ease-in-out;
+      border-bottom: 3px solid transparent;
+      padding: 0px 8px 12px 8px;
+      @include screen-xl {
+         padding: 0;
+         width: 100%;
+         height: 46px;
+         display: inline-block;
+         text-align: center;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+         padding: 0 15px;
+      }
+      @media (max-width: 480px) {
+         justify-content: flex-start;
+      }
+      @include screen-s {
+         padding: 0 12px;
+      }
+      &:hover {
+         color: $green;
+         border-color: $green;
+         @include screen-xl {
+            color: $white;
+            background-color: $green;
+         }
+      }
+      &.active {
+         font-weight: 600;
+         color: $green;
+         border-color: $green;
+         @include screen-xl {
+            color: $white;
+            background-color: $green;
+         }
+      }
+      
+   }
+}
+
+
+
+
+
+
+// @media (max-width: 1024px) {
+ 
+   
+//    .menu__body::before {
+//       content: '';
+//       position: fixed;
+//       width: 100%;
+//       top: 0;
+//       left: 0;
+//       height: 70px;
+//       background-color: grey;
+//       z-index: 2;
+//    }
+
+// }

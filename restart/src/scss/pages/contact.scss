@@ -1,0 +1,148 @@
+.contact {
+   background-color: #fff;
+   margin-bottom: 89px;
+   @include screen-l {
+      margin-bottom: -4px;
+   }
+   @include screen-s {
+      padding-bottom: 23px;
+      margin-bottom: 22px;  
+   }
+
+   &__body {
+      padding-top: 99px;
+      padding-bottom: 65px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 58px;
+      @include screen-l {
+         flex-direction: column;
+         padding-top: 158px;
+         padding-bottom: 0;
+         margin-bottom: 49px;
+      }
+      @include screen-s {
+         margin-bottom: 38px;
+      }
+   }
+
+   &__info {
+      padding-top: 22px;
+      min-width: 302px;
+   }
+
+   &__title {
+      font-size: 20px;
+      line-height: 130%;
+      margin-bottom: 38px;
+      @include screen-l {
+         margin-bottom: 28px;
+      }
+      @include screen-s {
+         margin-bottom: 38px; 
+      }
+   }
+
+   &__block {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 37px;
+      margin-left: 1px;
+      @include screen-l {
+         grid-template-columns: 1fr 1fr;
+         column-gap: 69px;
+         row-gap: 45px;
+      }
+      @include screen-m {
+         column-gap: 20px;
+      }
+      @media (max-width: 530px) {
+         grid-template-columns: 1fr;
+         gap: 0;
+      }
+   }
+
+   &__box {
+      @media (max-width: 530px) {
+         &:nth-child(1) {
+            margin-bottom: 37px;
+         }
+         &:nth-child(2) {
+            margin-bottom: 30px;
+         }
+         &:nth-child(3) {
+            margin-bottom: 27px;
+         }
+      }
+   }
+
+   &__box:last-child {
+      padding-top: 2px;
+   }
+
+   &__address-link {
+      color: #337AB7;
+   }
+
+   &__tel-box {
+      display: flex;
+      column-gap: 5px;
+      span {
+         color: #999999;
+      }
+      & .viber {
+         color: #79509A;
+      }
+      @include screen-l {
+         min-width: 301px;
+      }
+      @include screen-s {
+         &.br {
+            flex-direction: column;
+         }
+      }
+   }
+   
+   &__link-box:not(:last-child) {
+      margin-bottom: 1px;
+      @include screen-l {
+         margin-bottom: 0;
+      }
+   }
+
+   &__link-box {
+      @include screen-l {
+         padding-top: 2px;
+      }
+   }
+
+   &__link {
+      color: #337AB7;
+   }
+
+   &__schedule {
+      line-height: 160%;
+   }
+
+   &__map {
+      @include screen-l {
+         display: none;
+      }
+      &.adaptive {
+         display: none;
+         @include screen-l {
+            display: block;
+         }
+      }
+   }
+
+   & iframe {
+      max-width: 1001px;
+      width: 100%;
+      height: 570px;
+      @include screen-l {
+         max-width: 768px;
+      }
+   }
+}

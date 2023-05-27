@@ -1,0 +1,424 @@
+.mission {
+   padding: 75px 0px 61px 0px;
+   background-color: $color-white;
+   @include screen-l {
+      padding-top: 154px;
+      padding-bottom: 35px;
+   }
+   @include screen-s {
+      padding-top: 173px;
+      padding-bottom: 21px;
+   }
+
+   &__title {
+      padding: 26px 63px 27px 64px;
+      background-color: $color-header-bg;
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 33px;
+      @include screen-l {
+         padding: 25px 15px 27px 15px;
+         font-size: 16px;
+         margin-bottom: 35px;
+      }
+      @include screen-s {
+         padding: 23px 12px 27px 12px;
+         margin: 0px 13px 26px 13px;
+      }
+   }
+
+   &__block {
+      padding: 0px 42px 0px 38px;
+      @include screen-l {
+         padding: 0;
+      }
+      @include screen-s {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+      }
+   }
+
+   &__text {
+      line-height: 185%;
+      margin-bottom: 25px;
+      color: $color-dark-grey;
+      text-align: center;
+      @include screen-l {
+         margin-bottom: 35px;
+         line-height: 140%;
+         & br {
+            display: none;
+         }
+      }
+      @include screen-s {
+         max-width: 264px;
+         margin-bottom: 27px;
+      }
+   }
+
+   &__image {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-bottom: 36px;
+      @include screen-l {
+         margin-bottom: 30px;
+      }
+      @include screen-s {
+         margin: 0px 5px 22px 5px;
+         height: 76px;
+      }
+   }
+
+   &__box {
+      @include screen-m {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+      }
+
+      &-title {
+         font-size: 20px;
+         margin-bottom: 14px;
+         & br {
+            display: none;
+         }
+         @include screen-l {
+            font-size: 16px;
+            margin-bottom: 7px;
+         }
+         @include screen-s {
+            max-width: 264px;
+            margin-bottom: 21px;
+            & br {
+               display: block;
+            }
+         }
+      }
+      &-list {
+         line-height: 175%;
+         color: $color-dark-grey;
+         @include screen-s {
+            max-width: 264px;
+         }
+      }
+      &-item {
+         list-style: disc;
+         margin-left: 12px;
+         @include screen-l {
+            margin-left: 9px;
+         }
+      }
+   }
+}
+
+.video-bg {
+   padding: 44px 0px 45px 0px;
+   @include screen-l {
+      padding: 41px 0px 26px 0px;
+   }
+   @include screen-m {
+      padding: 30px 0;
+   }
+}
+
+.assortment {
+
+   &__body {
+      background-color: $color-white;
+      border: 1px solid #E6E6E6;
+      border-radius: 5px;
+      padding: 55px 42px 47px 49px;
+      @include screen-l {
+         padding: 35px 15px 32px 15px;
+      }
+      @include screen-s {
+         padding: 31px 13px 28px 13px;
+      }
+   }
+
+   &__title {
+      font-size: 20px;
+      margin-bottom: 16px;
+      @include screen-l {
+         margin-bottom: 20px;
+         line-height: 125%;
+      }
+      @include screen-s {
+         font-size: 16px;
+         margin-bottom: 17px;
+         line-height: 150%;
+      }
+   }
+
+   &__text {
+      color: $color-dark-grey;
+      margin-bottom: 33px;
+      max-width: 821px;
+      @include screen-l {
+         margin-bottom: 19px;
+      }
+      @include screen-s {
+         font-size: 15px;
+         margin-bottom: 31px;
+         line-height: 147%;
+      }
+   }
+
+   &__block {
+      border-top: 1px solid #E2E2E2;
+      padding-top: 33px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      column-gap: 40px;
+      @include screen-l {
+         padding-top: 23px;
+         column-gap: 31px;
+      }
+      @include screen-m {
+         flex-direction: column;
+         row-gap: 20px;
+      }
+      @include screen-s {
+         padding-top: 33px;
+         row-gap: 22px;
+      }
+   }
+
+   &__box {
+      &-title {
+         margin-bottom: 14px;
+         @include screen-l {
+            margin-bottom: 5px;
+         }
+         @include screen-s {
+            margin-bottom: 1px;
+         }
+      }
+   
+      &-list {
+         color: $color-dark-grey;
+         padding-left: 9px;
+         line-height: 176%;
+         @include screen-s {
+            line-height: 175%;
+         }
+      }
+   
+      &-item {
+         list-style: disc;
+      }
+      &:last-child .assortment__box-title {
+         @include screen-s {
+            margin-bottom: 5px;
+         }
+      }
+   }  
+}
+
+.check {
+   
+   &__body {
+      padding: 60px 102px 48px 0px;
+      display: grid;
+      grid-template-columns: repeat(2, 580px);
+      column-gap: 50px;
+      row-gap: 53px;
+      justify-content: space-between;
+      @include screen-xl {
+         grid-template-columns: repeat(2, 1fr);
+         padding-right: 0;
+      }
+      @include screen-l {
+         padding: 51px 15px 40px 0px;
+         column-gap: 17px;
+         row-gap: 31px;
+      }
+      @include screen-m {
+         grid-template-columns: repeat(1, 1fr);
+         padding-right: 0;
+      }
+      @include screen-s {
+         padding-top: 50px;
+         padding-bottom: 43px;
+         row-gap: 0;
+      }
+   }
+
+   &__box {
+      display: flex;
+      align-items: start;
+      @include screen-s {
+         display: block;
+         &:nth-child(1) {
+            margin-bottom: 44px;
+         }
+         &:nth-child(2) {
+            margin-bottom: 34px;
+         }
+         &:nth-child(3) {
+            margin-bottom: 30px;
+         }
+      }
+   }
+
+   &__box:not(:first-child) br {
+      @include screen-l {
+         display: none;
+      }
+   }
+   &__box:nth-child(3) br {
+      @include screen-s {
+         display: block;
+      }
+   }    
+
+   &__box:nth-child(2) .check__box-img,
+   &__box:nth-child(4) .check__box-img {
+      margin-right: 20px;
+      @include screen-l {
+         margin-right: 14px;
+      }
+      @include screen-s {
+         margin-right: 0;
+         margin-bottom: 7px;
+      }
+   }
+   &__box:nth-child(3) .check__box-img,
+   &__box:nth-child(4) .check__box-img {
+      @include screen-s {
+         margin-left: -1px;
+      }
+   }
+   &__box:nth-child(3) .check__box-img {
+      @include screen-s {
+         margin-bottom: 7px;
+      }
+   }
+   &__box:nth-child(4) .check__box-img {
+      @include screen-s {
+         margin-bottom: 11px;
+      }
+   }
+
+   &__box-img {
+      max-width: 28px;
+      margin-right: 21px;
+      @include screen-l {
+         margin-right: 12px;
+         margin-left: -2px;
+      }
+      @include screen-s {
+         margin-right: 0;
+         margin-bottom: 4px;
+      }
+   }
+}
+
+.decision {
+   padding-bottom: 101px;
+   @include screen-l {
+      padding-bottom: 33px;
+   }
+   @include screen-s {
+      padding-bottom: 23px;
+   }
+
+   &__body {
+      background-color: $color-white;
+      height: 179px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      border: 1px solid #E6E6E6;
+      border-radius: 5px;
+      position: relative;
+      @include screen-xl {
+         height: 220px;
+      }
+      @media (max-width: 1200px) {
+         height: 240px;
+      }
+      @media (max-width: 1100px) {
+         height: auto;
+         align-items: flex-start;
+         flex-direction: column;
+      }
+   }
+
+   &__image {
+      max-width: 100%;
+      height: inherit;
+      @media (max-width: 1100px) {
+         height: 178px;
+         margin-bottom: 27px;
+      }
+      @include screen-l {
+         width: 706px;
+      }
+      @media (max-width: 767px) {
+         width: 100%;
+         height: auto;
+      }
+      @include screen-s {
+         margin-bottom: 16px;
+      }
+   }
+
+   &__block {
+      max-width: 807px;
+      position: absolute;
+      top: 29px;
+      left: 520px;
+      right: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include screen-xl {
+         left: 50%;
+         top: auto;
+      }
+      @media (max-width: 1200px) {
+         left: 65%;
+      }
+      @media (max-width: 1100px) {
+         position: static;
+         padding: 0 15px;
+      }
+      @include screen-s {
+         padding: 0 12px;
+      }
+
+      &-text {
+         color: #000000;
+         margin-bottom: 20px;
+         @include screen-l {
+            margin-bottom: 26px;
+         }
+         @include screen-s {
+            margin-bottom: 28px;
+         }
+      }
+   
+      &-button {
+         display: inline-block;
+         max-width: 230px;
+         width: 100%;
+         text-align: center;
+         padding: 12px 15px 12px 10px;
+         border: 1px solid #CECECE;
+         border-radius: 100px;
+         background-color: #fff;
+         @media (max-width: 1100px) {
+            margin-bottom: 36px;
+         }
+         @include screen-s {
+            align-self: center;
+            margin-bottom: 35px;
+         }
+      }
+   }
+}

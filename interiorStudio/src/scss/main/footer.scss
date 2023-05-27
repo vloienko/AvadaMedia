@@ -1,0 +1,49 @@
+.footer {
+   background-color: transparent;
+   font-weight: 300;
+   font-size: 12px;
+   line-height: 18px;
+   color: $text-gray;
+   margin-top: -52px;
+   margin-bottom: 26px;
+   letter-spacing: normal;
+   z-index: 50;
+
+   @media (max-width: 530px) {
+      margin-top: -80px;
+   }
+
+   &.black {
+      svg path {
+         fill: $text-black;
+      }
+   }
+
+   &.none {
+      display: none;
+   }
+
+   &__body {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+      @media (max-width: 530px) {
+         flex-direction: column;
+         align-items: flex-start;
+         justify-content: center;
+         gap: 10px;
+      }
+   }
+
+   &__box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 26px;
+   }
+
+   &__logo-txt path {
+      fill: $text-white;
+   }
+}

@@ -1,0 +1,204 @@
+.walnut-bg {
+   color: $white;
+   width: 100%;
+   min-height: 450px;
+   padding-bottom: 31.25%;
+   position: relative;
+   background: center/cover no-repeat;
+   background-image: url('../img/corporate/walnut-bg.jpg');
+   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.45);
+   @include adaptiveValue('margin-bottom', 93, 60);
+
+   @include screen-xl {
+      margin-top: 119px;
+   }
+
+   & .container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &__title {
+      margin-bottom: 20px;
+   }
+
+   &__sub-title {
+      max-width: 600px;
+   }
+   
+}
+
+
+
+.wholesale {
+
+   .tabs__container {
+      margin-bottom: 36px;
+
+      @include screen-xl {
+         margin: 0;
+      }
+   }
+   .tabs__nav {
+      max-width: 100%;
+
+      @include screen-xl {
+         gap: 25px;
+         br {
+            display: none;
+         }
+      }
+      @include screen-l {
+         overflow: scroll;
+         padding-bottom: 10px;
+      }
+
+      &-btn {
+         padding-bottom: 16px;
+         text-align: left;
+         width: max-content;
+         span {
+            @include screen-xl {
+               width: 160px;
+               white-space: nowrap;
+               text-overflow: ellipsis;
+               overflow: hidden;
+            }
+            @include screen-l {
+                 width: 120px;
+            }
+         }
+      }
+   }
+   .tabs__content {
+      margin-bottom: 98px;
+
+      @include screen-xl {
+         margin: 0;
+      }
+   }
+   .tabs__panel {
+      grid-template-columns: 37% 59%;
+
+      @include screen-xxl {
+         align-items: center;
+      }
+      @include screen-xl {
+         grid-template-columns: 1fr;
+      }
+
+      &.orange .wholesale__button {
+         background-color: orange;
+      }
+      &.purple .wholesale__button {
+         background-color: purple;
+      }
+      &.pink .wholesale__button {
+         background-color: pink;
+      }
+      &.plum .wholesale__button {
+         background-color: plum;
+      }
+   }
+   .tabs__block {
+      margin-top: 48px;
+
+      @include screen-xxl {
+         margin-top: 0;
+      }
+   }
+
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      @include adaptiveValue(' margin-bottom', 133, 60);
+      gap: 40px;
+
+      @include screen-xl {
+         flex-direction: column;
+         align-items: flex-start;
+      }
+   }
+
+   &__title {
+      max-width: 500px;
+
+      @include screen-xl {
+         max-width: 100%;
+         br {
+            display: none;
+         }
+      }
+   }
+
+   &__box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      max-width: 770px;
+      width: 100%;
+
+      @include screen-xl {
+         max-width: 100%;
+      }
+      @include screen-l {
+         flex-direction: column;
+      }
+
+      & .wholesale__text {
+         max-width: 330px;
+
+         @include screen-xl {
+            max-width: 100%;
+         }
+      }
+   }
+
+   &__text {
+      font-family: 'Raleway';
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+
+      span {
+         font-weight: 700;
+      }
+   }
+
+   &__holder {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 40px;
+   }
+
+   &__button {
+      font-family: 'Raleway';
+      font-weight: 700;
+      line-height: 16px;
+      width: 188px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.05em;
+   }
+   
+}
+
+
+
+.eco-corporate {
+   & .eco {
+      background-image: url('../img/corporate/eco-bg.jpg');
+   }
+}

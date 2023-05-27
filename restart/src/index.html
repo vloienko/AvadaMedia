@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_static/head.html',{
+	"title":"Головна"
+	})
+	<body>
+		<div class="wrapper">
+			@@include("html/main/header.html",{})
+			<main class="main">
+				<section class="photo">
+					<div class="repair-box photo__box-left">
+						<div class="repair-box__info">
+							<img class="repair-box__img" src="@img/index/repair-box/1.svg" alt="repair images">
+							<p class="repair-box__text">
+								Діагностика та ремонт стартерів, генераторів, кондиціонерів
+							</p>
+						</div>
+						<a href="#" class="repair-box__button">Мережа сервісів</a>
+					</div>
+
+					<div class="container">
+						<div class="photo__box">
+							<div class="photo__red-btn">
+								<a class="photo__red-arrow" href="#">«</a>
+								<a class="photo__red-arrow" href="#">»</a>
+							</div>
+						</div>
+
+						<div class="photo__block">
+							<div class="repair-box first">
+								<div class="repair-box__info">
+									<img class="repair-box__img" src="@img/index/repair-box/1.svg" alt="repair images">
+									<p class="repair-box__text">
+										Діагностика та ремонт стартерів, генераторів, кондиціонерів
+									</p>
+								</div>
+								<a href="#" class="repair-box__button">Мережа сервісів</a>
+							</div>
+							<div class="repair-box second">
+								<div class="repair-box__info">
+									<img class="repair-box__img" src="@img/index/repair-box/2.svg" alt="repair images">
+									<p class="repair-box__text">
+										Продаж стартерів, генераторів <br> та компонентів
+									</p>
+								</div>
+								<a href="#" class="repair-box__button">Перейти в магазин</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="repair-box photo__box-right">
+						<div class="repair-box__info">
+							<img class="repair-box__img" src="@img/index/repair-box/2.svg" alt="repair images">
+							<p class="repair-box__text">
+								Продаж стартерів, генераторів <br> та компонентів
+							</p>
+						</div>
+						<a href="#" class="repair-box__button">Перейти в магазин</a>
+					</div>
+				</section>
+				
+				<section class="services">
+					<div class="container">
+						<div class="services__body">
+							<img class="services__logo" src="@img/logo.svg" alt="logo">
+							<h2 class="services__title">Справжні професіонали <br> на ринку стартерів та генераторів</h2>
+							<div class="services__block">
+								<a href="#" class="services__box">
+									<img class="services__box-img" src="@img/index/services/box-1.jpg" alt="images">
+									<div class="services__box-mini">
+										<h4 class="services__box-title">Мережа СТЦ</h4>
+										<p class="services__box-text">
+											Ремонт стартерів, генераторів, кондиціонерів
+										</p>
+									</div>
+								</a>
+								<a href="#" class="services__box">
+									<img class="services__box-img" src="@img/index/services/box-2.jpg" alt="images">
+									<div class="services__box-mini">
+										<h4 class="services__box-title">Інтернет-магазин</h4>
+										<p class="services__box-text">
+											Понад 15 000 позицій агрегатів та компонентів
+										</p>
+									</div>
+								</a>
+								<a href="#" class="services__box">
+									<img class="services__box-img" src="@img/index/services/box-3.jpg" alt="images">
+									<div class="services__box-mini">
+										<h4 class="services__box-title">Готові рішення</h4>
+										<p class="services__box-text">
+											Готові рішення <br> в стар-ген сегменті для СТО
+										</p>
+									</div>
+								</a>
+							</div>
+							<p class="services__text">
+								У нас представлений широкий асортимент запчастин <br> та комплектуючих для вантажних <br> та легкових авто, сільськогосподарських машин, водомоторної техніки, а також мотоциклів та промислового сектору ринку.
+							</p>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('html/main/footer.html',{})
+		</div>
+		@@include('html/_static/script.html',{})
+	</body>
+</html>

@@ -1,0 +1,143 @@
+.our-projects {
+   letter-spacing: normal;
+   padding-bottom: 0;
+   position: relative;
+   z-index: 50;
+
+   & .latest-news__navbar {
+      margin-top: 0;
+      column-gap: 33px;
+      @include screen-xl {
+         column-gap: 35px;
+      }
+   }
+   & .latest-news__navbar-btn {
+      @include screen-xl {
+         font-weight: 500;
+         line-height: 16px;
+         letter-spacing: normal;
+         padding-bottom: 0;
+      }
+   }
+
+   &__box {
+      align-items: flex-start;
+   }
+
+   &__block {
+      max-width: 449px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      @include screen-l {
+         max-width: 520px;
+      }
+   }
+
+   &__sub-title {
+      margin-top: -3px;
+      margin-bottom: 35.5px;
+      opacity: 1;
+      br {
+         display: none;
+      }
+      @include screen-xl {
+         br {
+            display: block;
+         }
+      }
+      @include screen-l {
+         br {
+            display: none;
+         }
+      }
+      @include screen-s {
+         margin-bottom: 27px;
+      }
+   }
+
+   &__gallery {
+      color: $text-white;
+      @include screen-l {
+         grid-template-columns: 1fr;
+         grid-template-rows: auto;
+      }
+      & .projects__block {
+         padding-bottom: 34px;
+         @include screen-xl {
+            padding-left: 32px;
+         }
+         @include screen-l {
+            grid-column: span 1 !important;
+         }
+         @include screen-m {
+            height: 480px;
+         }
+         @include screen-s {
+            height: 327px;
+         }
+         &:nth-child(5) {
+            background-image: url('../img/projects/our-projects/img-5.jpg');
+         }
+         &:nth-child(6) {
+            background-image: url('../img/projects/our-projects/img-6.jpg');
+			   grid-column: span 2;
+         }
+      }
+      & .projects__block-subtitle {
+         @include screen-xl {
+            font-size: 20px;
+            line-height: 25px;
+            margin-bottom: 38px !important;
+         }
+         @include screen-s {
+            margin-bottom: 9px !important;
+         }
+      }
+   }
+
+   &__info {
+      max-width: 175px;
+   }
+}
+
+
+
+.photo-gallery.projects {
+   background-color: #fff;
+   color: $text-black;
+   padding-bottom: 168px;
+   @include screen-xl {
+      padding-top: 121px;
+      padding-bottom: 180px;
+   }
+   @include screen-l {
+      padding-top: 104px;
+      padding-bottom: 159px;
+   }
+   @include screen-s {
+      padding-top: 98px;    
+      padding-bottom: 165px;
+   }
+
+   & .photo-gallery__btn {
+      border-color: $text-gray;
+      max-width: 184px;
+      width: 100%;
+      letter-spacing: 0.06em;
+   }
+
+   & .photo-gallery__title {
+      letter-spacing: 0.018em;
+      @include screen-xl {
+         max-width: 365px;
+         letter-spacing: normal;
+      }
+      @include screen-l {
+         max-width: 443px;
+      }
+      @include screen-s {
+         margin-bottom: 11px;
+      }
+   }
+}

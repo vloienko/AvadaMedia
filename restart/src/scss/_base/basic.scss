@@ -1,0 +1,159 @@
+html,
+body {
+	height: 100%;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	overflow-x: hidden;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+
+.footer {
+	flex: 0 0 auto;
+}
+
+.container {
+	max-width: 1391px;
+	margin: 0 auto;
+	padding: 0 15px;
+	@include screen-l {
+		max-width: 738px;
+	}
+	@include screen-s {
+		max-width: 320px; 
+	}
+}
+
+body.lock {
+   overflow: hidden;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	color: $color-main;
+   background-color: $color-header-bg;
+}
+
+
+.video {
+   position: relative;
+   width: 100%;
+   height: 0;
+   padding-bottom: 220px;
+   background-color: #000;
+   @include screen-l {
+      padding-bottom: 277px;
+   }
+   @include screen-m {
+      padding-bottom: 220px;
+   }
+
+   &__img {
+      object-fit: cover;
+      background-color: #fff;
+      border-radius: 5px;
+   }
+   &__bg {
+      background-color: #000;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      pointer-events: none;
+   }
+   &__media {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+   }
+   &__button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 8;
+      display: none;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      @include screen-l {
+         top: 48%;
+      }
+      @include screen-s {
+         top: 50%;
+      }
+   }
+   &__button-circle {
+      border: 2px solid #fff;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 10px;
+      transition: all .3s;
+      @include screen-l {
+         width: 40px;
+         height: 40px;
+         padding-left: 5px;
+      }
+      @include screen-s {
+         width: 100px;
+         height: 100px;
+         padding-left: 10px;
+      }
+   }
+   &__button-play {
+      width: 42px;
+      height: 42px;
+      @include screen-l {
+         width: 16px;
+         height: 16px;
+      }
+      @include screen-s {
+         width: 42px;
+         height: 42px;
+      }
+   }
+   &:hover .video__button-circle,
+   &__button:focus .video__button-circle {
+      border-color: #ff0000;
+   }
+   &__button-shape {
+      fill: #212121;
+      fill-opacity: 0.8;
+   }
+   &__button-icon {
+      fill: #ffffff;
+   }
+   &__button:focus {
+      outline: none;
+   }
+   &:hover .video__button-shape,
+   &__button:focus .video__button-shape {
+      fill: #ff0000;
+      fill-opacity: 1;
+   }
+   &--enabled {
+      cursor: pointer;
+   }
+   &--enabled .video__button {
+      display: block;
+   }
+}

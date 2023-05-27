@@ -1,0 +1,36 @@
+.body-404 {
+   background-color: $text-black;
+}
+
+
+.not-found {
+   background-color: $text-black;
+   color: $text-white;
+   height: 100vh;
+   width: 100vw;
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+
+   &__body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      @include screen-xl {
+         grid-template-columns: 1fr 1fr;
+      }
+      @include screen-l {
+         grid-template-columns: 1fr 0.2fr;
+      }
+      @media (max-width: 530px) {
+         grid-template-columns: 1fr;
+      }
+   }
+
+   &__title {
+      margin-bottom: 24px;
+   }
+
+   &__text {
+      margin-bottom: 48px;
+   }
+}

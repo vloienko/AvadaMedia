@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_static/head.html',{
+"title":"Новость"
+})
+
+<body>
+	<div class="wrapper">
+		@@include("html/main/header.html",{})
+		<main class="main">
+			<div class="breadcrumbs gray">
+				<div class="breadcrumbs__body">
+					<a class="breadcrumbs__main" href="index.html">Главная</a>
+					<svg class='breadcrumbs__arrow'>
+						<use xlink:href='@img/sprite.svg#swiper-arrow'></use>
+					</svg>
+					<a class="breadcrumbs__current" href="#">Новости и статьи</a>
+				</div>
+			</div>
+
+			<div class="container">
+				<div id="main-content" class="container-wrapper">
+					<div id="sidebar" class="sidebar">
+						<h5 class="sidebar__title">Последние публикации</h5>
+						<div class="sidebar__inner">
+							<ul class="sidebar__news">
+								<li class="sidebar__new">
+									<div class="sidebar__preview preview-1"></div>
+									@@include("html/components/news-content.html",{})
+								</li>
+								<li class="sidebar__new">
+									<div class="sidebar__preview preview-2"></div>
+									@@include("html/components/news-content.html",{})
+								</li>
+								<li class="sidebar__new">
+									<div class="sidebar__preview preview-3"></div>
+									@@include("html/components/news-content.html",{})
+								</li>
+							</ul>
+							<div class="sidebar__box">
+								<span>ОРЕХ <br> ПРИЧЕРНОМОРЬЯ</span>
+								<p>Присоединяйтесь <br> к нам в соц. сетях</p>
+								<div class="social social-sidebar">
+									<a class="social__link" href="#">
+										<svg class='social__img'>
+											<use xlink:href='@img/sprite.svg#facebook'></use>
+										</svg>
+									</a>
+									<a class="social__link" href="#">
+										<svg class='social__img'>
+											<use xlink:href='@img/sprite.svg#instagram'></use>
+										</svg>
+									</a>
+									<a class="social__link" href="#">
+										<svg class='social__img youtube'>
+											<use xlink:href='@img/sprite.svg#youtube'></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<section id="content" class="specific-news">
+						<h3 class="specific-news__title">Центр поддержки экспорта, в студии Павел Тулба</h3>
+						<a class="specific-news__date" href="#">12.04.2019</a>
+						<img class="specific-news__image" src="@img/news/specific-news-1.jpg" alt="Image news">
+						<div class="specific-news__box">
+							<p class="specific-news__text">
+								Сельскохозяйственный обслуживающий кооператив “Орех Причерноморья” предлагает своим клиентам
+								выгодные условия сотрудничества. Ореховый бизнес – один из наиболее перспективных в Украине.
+								Ежегодная нехватка продукта в Европе составляет 100 000 тонн. У Вас есть возможность зарабатывать
+								десятки тысяч долларов в год всего на нескольких гектарах земли.
+							</p>
+							<p class="specific-news__text">
+								Предприятие основано в 2012 году для закладки смешанного сада грецкого ореха и фундука в Одесской
+								области. На сегодня уже заложено более 200 гектаров сада и этот процесс продолжается. Кооператив
+								предоставляет полный цикл сопровождения: от выращивания до сбыта.
+							</p>
+							<p class="specific-news__text">
+								Кроме выращивания грецкого ореха и фундука, компания занимается выращиванием саженцев, разведением
+								и выращиванием овец, а также является первой в Украине компанией, приступившей к промышленному
+								выращиванию трюфелей на корнях фундука.
+							</p>
+						</div>
+						<h4 class="specific-news__small-title">
+							В Украине появится первое насаждение органического шиповника
+						</h4>
+						<p class="specific-news__text">
+							Наш сельскохозяйственный обслуживающий кооператив «Орех Причерноморья» был основан в 2012-ом году
+							для закладки смешанного сада грецкого ореха и фундука. На данный момент во владении нашей компании
+							находится 1 гектар тепличной площади и 270 гектар садовой площади, которую мы планируем расширять.
+							«Орех Причерноморья» включен в реестр Министерства Аграрной Политики Украины.
+						</p>
+						<h6 class="specific-news__min-title">Смешанный сад грецкий орех+шиповник</h6>
+						<ul class="specific-news__list">
+							<li class="specific-news__item">
+								Возможность полной механизации всех работ по саду
+							</li>
+							<li class="specific-news__item">
+								Невысокая стоимость смешанного сада при закладке
+							</li>
+							<li class="specific-news__item">
+								Необходимость в интенсивном поливе только первые четыре года</li>
+							<li class="specific-news__item">
+								Долгий срок хранения готовой продукции и унификация сушильных камер и складов для хранения
+							</li>
+						</ul>
+						<img class="specific-news__image" src="@img/news/specific-news-2.jpg" alt="Image news">
+						<h4 class="specific-news__small-title">
+							В Украине появится первое насаждение органического шиповника
+						</h4>
+						<div class="specific-news__box">
+							<p class="specific-news__text">
+								Сельскохозяйственный обслуживающий кооператив “Орех Причерноморья” предлагает своим клиентам
+								выгодные условия сотрудничества. Ореховый бизнес – один из наиболее перспективных в Украине.
+								Ежегодная нехватка продукта в Европе составляет 100 000 тонн. У Вас есть возможность зарабатывать
+								десятки тысяч долларов в год всего на нескольких гектарах земли.
+							</p>
+							<p class="specific-news__text">
+								Нами разработано и опробовано на собственной практике предложение для закладки многолетних насаждений шиповника, на земельных участках не пригодных к традиционному земледелию. Первых 5 гектар промышленной плантации шиповника, были высажены на месте бывшей сельской свалки и остатков разрушенной молочно товарной фермы.
+							</p>
+						</div>
+					</section>
+				</div>
+			</div>
+
+		</main>
+		@@include('html/main/footer.html',{})
+	</div>
+	@@include('html/_static/script.html',{})
+</body>
+
+</html>

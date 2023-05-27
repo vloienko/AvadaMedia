@@ -1,0 +1,21 @@
+//<SETTINGS>========================================
+@import "_fonts/fonts";
+@import "_base/null";
+@import "_base/helpers";
+@import "_base/mixins";
+@import "_base/basic";
+//<SETTINGS>========================================
+
+//<HEDER + FOOTER STYLE>============================
+@import "main/header";
+@import "main/footer";
+@import "main/popup";
+//</HEDER + FOOTER STYLE>===========================
+
+//<PAGES STYLE>=====================================
+@import "pages/index";
+@import "pages/company";
+@import "pages/chain";
+@import "pages/solution";
+@import "pages/contact";
+//</PAGES STYLE>====================================

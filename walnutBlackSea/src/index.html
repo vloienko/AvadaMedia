@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_static/head.html',{
+"title":"Головна"
+})
+
+<body>
+	<div class="wrapper">
+		@@include("html/main/header.html",{})
+		<main class="main">
+
+			<section class="main-screen index">
+				@@include("html/components/videoMain.html",{})
+			</section>
+
+			<section class="shop">
+				<div class="container">
+					<div class="shop__body">
+						<h2 class="shop__title h2-title">Продукция</h2>
+						<h4 class="shop__sub-title h4-sub-title">
+							Экологически чистые, качественные ядра грецкого ореха и фундука, а также плоды шиповника в удобной,
+							надежной, вакуумной упаковке разного объема
+						</h4>
+						<div class="shop__catalog catalog">
+
+							@@include("html/components/catalog.html",{})
+							
+							<a class="shop__button catalog__button button-white" href="#">Перейти в магазин</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="manufacturer">
+				<div class="container">
+					<div class="manufacturer__body">
+						<div class="manufacturer__info">
+							<h2 class="manufacturer__title h2-title">О производителе</h2>
+							<p class="manufacturer__text">
+								<span class="green">Сельскохозяйственный обслуживающий кооператив “Орех Причерноморья”</span> выращивает смешанные сады ореха грецкого с фундуком, а также ореха грецкого с шиповником, на площади более 150 гектаров.
+								<span class="text">
+									Помимо этого кооператив занимается выращиванием посадочного материала, саженцов привитого и непривитого грецкого ореха, фундука и шиповника.
+								</span>
+							</p>
+							<a class="manufacturer__button button-white" href="#">Подробнее</a>
+						</div>
+
+						<div class="manufacturer__swiper swiper">
+							<div class="manufacturer__wrapper swiper-wrapper">
+								<div class="manufacturer__slide swiper-slide">
+									@@include("html/components/videoAll.html",{})
+								</div>
+								<div class="manufacturer__slide swiper-slide">
+									@@include("html/components/videoAll.html",{})
+								</div>
+								<div class="manufacturer__slide swiper-slide">
+									@@include("html/components/videoAll.html",{})
+								</div>
+							</div>
+
+							<div class="manufacturer__arrow arrow-btn">
+								<div class="arrow-btn__box">
+									<svg class='arrow-btn__svg manufacturer-prev swiper-button-prev'>
+										<use xlink:href='@img/sprite.svg#swiper-arrow'></use>
+									</svg>
+								</div>
+								<div class="arrow-btn__box">
+									<svg class='arrow-btn__svg manufacturer-next swiper-button-next'>
+										<use xlink:href='@img/sprite.svg#swiper-arrow'></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+
+						<ul class="manufacturer__items">
+							<li class="manufacturer__item">
+								<div class="manufacturer__box">
+									<p>240</p>
+									<span>Га</span>
+								</div>
+								<p class="manufacturer__row">Cмешанных <br> садов</p>
+							</li>
+							<li class="manufacturer__item">
+								<div class="manufacturer__box">
+									<p>1</p>
+									<span>Га</span>
+								</div>
+								<p class="manufacturer__row">Тепличного <br> комплекса</p>
+							</li>
+							<li class="manufacturer__item">
+								<div class="manufacturer__box">
+									<p>10</p>
+									<span>Га</span>
+								</div>
+								<p class="manufacturer__row">Первая промышленная плантация <br> шиповника в Украине</p>
+							</li>
+							<li class="manufacturer__item">
+								<div class="manufacturer__box">
+									<p>80</p>
+									<span>%</span>
+								</div>
+								<p class="manufacturer__row">Приживаемости <br> саженцев</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="main-target">
+				<div class="video" data-src="https://www.youtube.com/embed/RAbzslym6o0?autoplay=1">
+					<div class="container">
+						<div class="video__body">
+							<h2 class="main-target__title h2-title">
+								Наша главная цель - получить максимальную прибыль с одного гектара
+							</h2>
+							<button class="video__button">
+								<svg>
+									<use xlink:href='@img/sprite.svg#video-btn'></use>
+								</svg>
+							</button>
+							<p class="main-target__descr">Cмотреть видео о производстве</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="benefit">
+				<div class="container">
+					<div class="benefit__body">
+						<h2 class="benefit__title h2-title">О пользе продукта</h2>
+						<h4 class="benefit__sub-title h4-sub-title">
+							Каждый вид ореха содержит свой неповторимый уникальный баланс витаминов, и микроэлементов
+						</h4>
+
+						<div class="benefit__swiper swiper">
+							<div class="benefit__wrapper swiper-wrapper">
+								<div class="benefit__slide swiper-slide">
+									<div class="benefit__images walnut-1">
+										<img class="benefit__icon" src="@img/index/benefitIcon-1.svg" alt="Walnut">
+										<span class="benefit__walnut">Грецкий орех</span>
+
+										<div class="benefit__bg">
+											<img class="benefit__icon" src="@img/index/benefitIcon-1.svg" alt="Walnut">
+											<span class="benefit__walnut">Грецкий орех</span>
+											<p class="benefit__descr">
+												Дерево жизни - так часто величают грецкий орех, поскольку с давних пор он кормил, восстанавливал силы и лечил человека.
+												<br><br>
+												Даже небольшая горсть грецких орехов - это кладезь витаминов многих заболеваний
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="benefit__slide swiper-slide">
+									<div class="benefit__images walnut-2">
+										<img class="benefit__icon" src="@img/index/benefitIcon-2.svg" alt="Walnut">
+										<span class="benefit__walnut">Фундук</span>
+
+										<div class="benefit__bg">
+											<img class="benefit__icon" src="@img/index/benefitIcon-2.svg" alt="Walnut">
+											<span class="benefit__walnut">Фундук</span>
+											<p class="benefit__descr">
+												Дерево жизни - так часто величают грецкий орех, поскольку с давних пор он кормил, восстанавливал силы и лечил человека.
+												<br><br>
+												Даже небольшая горсть грецких орехов - это кладезь витаминов многих заболеваний
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="benefit__slide swiper-slide">
+									<div class="benefit__images walnut-3">
+										<img class="benefit__icon" src="@img/index/benefitIcon-3.svg" alt="Walnut">
+										<span class="benefit__walnut">Шиповник</span>
+
+										<div class="benefit__bg">
+											<img class="benefit__icon" src="@img/index/benefitIcon-3.svg" alt="Walnut">
+											<span class="benefit__walnut">Шиповник</span>
+											<p class="benefit__descr">
+												Дерево жизни - так часто величают грецкий орех, поскольку с давних пор он кормил, восстанавливал силы и лечил человека.
+												<br><br>
+												Даже небольшая горсть грецких орехов - это кладезь витаминов многих заболеваний
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</section>
+
+			<section class="eco-index">
+				@@include("html/components/eco.html",{})
+			</section>
+
+			@@include("html/components/news.html",{})
+
+		</main>
+		@@include('html/main/footer.html',{})
+	</div>
+	@@include('html/_static/script.html',{})
+</body>
+
+</html>

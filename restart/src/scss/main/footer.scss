@@ -1,0 +1,54 @@
+.footer {
+   background-color: $color-white;
+   padding-bottom: 15px;
+   @include screen-l {
+      padding-top: 15px;
+   }
+
+   &__body {
+      position: relative;
+   }
+
+   &__menu {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      height: 80px;
+      @media (max-width: 1019px) {
+         height: 104px;
+         top: -52px;
+      }
+      @include screen-l {
+         display: none;
+         height: auto;
+      }
+   }
+
+   &__descr {
+      padding-top: 69px;
+      font-size: 14px;
+      line-height: 20px;
+      color: #999999;
+      width: 100%;
+      text-align: justify;
+      @include screen-l {
+         padding-top: 0;
+         margin-bottom: 10px;
+      }
+   }
+
+   &__copyright {
+      font-size: 14px;
+      line-height: 20px;
+      color: #999999;
+      text-align: right;
+      margin-top: -9px;
+      @include screen-l {
+         margin-top: 15px;
+      }
+      @include screen-s {
+         margin-top: -1px;
+      }
+   }
+
+}

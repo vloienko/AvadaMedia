@@ -1,0 +1,53 @@
+<section class="news">
+   <div class="container">
+      <div class="news__body">
+         <div class="news__block">
+            <div class="news__box">
+               <h2 class="news__title h2-title">Новости</h2>
+               <h4 class="news__sub-title h4-sub-title">Свежие новости и полезная информация</h4>
+            </div>
+            <div class="news__arrow arrow-btn">
+               <div class="arrow-btn__box">
+                  <svg class='arrow-btn__svg news-prev swiper-button-prev'>
+                     <use xlink:href='@img/sprite.svg#swiper-arrow'></use>
+                  </svg>
+               </div>
+               <div class="arrow-btn__box">
+                  <svg class='arrow-btn__svg news-next swiper-button-next'>
+                     <use xlink:href='@img/sprite.svg#swiper-arrow'></use>
+                  </svg>
+               </div>
+            </div>
+         </div>
+         <div class="news__swiper swiper">
+            <div class="news__wrapper swiper-wrapper">
+               <div class="news__slide swiper-slide">
+                  <div class="news__preview preview-1"></div>
+						@@include("news-content.html",{})
+               </div>
+               <div class="news__slide swiper-slide">
+						@@include("videoAll.html",{})
+						@@include("news-content.html",{})
+               </div>
+               <div class="news__slide swiper-slide">
+                  <div class="news__preview preview-3"></div>
+						@@include("news-content.html",{})
+               </div>
+               <div class="news__slide swiper-slide">
+                  <div class="news__preview preview-1"></div>
+						@@include("news-content.html",{})
+               </div>
+               <div class="news__slide swiper-slide">
+						@@include("videoAll.html",{})
+						@@include("news-content.html",{})
+               </div>
+               <div class="news__slide swiper-slide">
+                  <div class="news__preview preview-3"></div>
+						@@include("news-content.html",{})
+               </div>
+            </div>
+         </div>
+         <a class="news__button button-white" href="#">Смотреть все новости</a>
+      </div>
+   </div>
+</section>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_static/head.html',{
+	"title":"News"
+	})
+	<body>
+		<div class="wrapper">
+			@@include("html/main/header.html",{})
+			<main class="main">
+				
+				<section class="latest-news">
+					<div class="container">
+						<div class="latest-news__body">
+							<div class="latest-news__box">
+								<h2 class="latest-news__title h2-title">Our latest news</h2>
+								<div class="latest-news__navbar">
+									<button type="button" class="latest-news__navbar-btn active">All</button>
+									<button type="button" class="latest-news__navbar-btn">Blog</button>
+									<button type="button" class="latest-news__navbar-btn">News</button>
+									<button type="button" class="latest-news__navbar-btn">Advice from the designer</button>
+								</div>
+								<div class="latest-news__select-wrapper">
+									<select class="latest-news__navbar-mobile" name="#">
+										<option class="latest-news__navbar-btn" value="Apartments">Apartments</option>
+										<option class="latest-news__navbar-btn" value="Blog">Blog</option>
+										<option class="latest-news__navbar-btn" value="News">News</option>
+										<option class="latest-news__navbar-btn" value="Advice">Advice from the designer</option>
+									</select>
+								</div>
+							</div>
+							<div class="latest-news__projects">
+								<div class="latest-news__card">
+									<h4 class="latest-news__card-title">
+										5 smart tips for productive collaboration with the designer
+									</h4>
+									<p class="latest-news__card-text main-text">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel gravida urna. Donec blandit sapien eu diam ullamcorper euismod. Nam tempus pellentesque ligula ut aliquam.
+									</p>
+									<a class="latest-news__card-btn discover-more" href="#">Discover more</a>
+								</div>
+								<div class="latest-news__card"></div>
+								<div class="latest-news__card">
+									<h4 class="latest-news__card-title white">
+										Non-standard <br> plinth options
+									</h4>
+								</div>
+								<div class="latest-news__card">
+									<h4 class="latest-news__card-title white">
+										Interior design, <br> LCD Rybalsky
+									</h4>
+								</div>
+								<div class="latest-news__card"></div>
+								<div class="latest-news__card">
+									<h4 class="latest-news__card-title">
+										5 smart tips for productive collaboration with the designer
+									</h4>
+									<p class="latest-news__card-text main-text">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel gravida urna. Donec blandit sapien eu diam ullamcorper euismod. Nam tempus pellentesque ligula ut aliquam.
+									</p>
+									<a class="latest-news__card-btn discover-more" href="#">Discover more</a>
+								</div>								
+							</div>
+							<div class="latest-news__navigation">
+								<svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10.6667 4H1.33341" stroke="#828282" />
+									<path d="M4.8335 0.5L1.3335 4L4.8335 7.5" stroke="#828282" />
+								</svg>
+								<ul class="latest-news__navigation-items">
+									<li class="latest-news__navigation-item">01</li>
+									<li class="latest-news__navigation-item">02</li>
+									<li class="latest-news__navigation-item">03</li>
+									<li class="latest-news__navigation-item point">...</li>
+									<li class="latest-news__navigation-item">15</li>
+								</ul>
+								<svg class="last-arrow" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10.6667 4H1.33341" stroke="#828282" />
+									<path d="M4.8335 0.5L1.3335 4L4.8335 7.5" stroke="#828282" />
+								</svg>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="form-bg">
+					<div class="container">
+						<div class="form-bg__body">
+							<h2 class="form-bg__title h2-title">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							</h2>
+							<div class="form-bg__box">
+								<p class="form-bg__text main-text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante felis, aliquam.
+								</p>
+								<form class="form-bg__form" action="#">
+									<input class="form-bg__email" type="email" placeholder="Email" required>
+									<button class="form-bg__btn" type="submit">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g>
+												<path d="M4 12H20"/>
+												<path d="M14 6L20 12L14 18"/>
+											</g>
+										</svg>
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			</main>
+			@@include('html/main/footer.html',{})
+		</div>
+		@@include('html/_static/script.html',{})
+	</body>
+</html>
