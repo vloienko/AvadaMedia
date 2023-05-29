@@ -1,0 +1,179 @@
+.title-user {
+   font-family: 'Raleway';
+   font-weight: 800;
+   font-size: 32px;
+   line-height: 32px;
+   /* or 100% */
+   letter-spacing: 0.01em;
+}
+.sub-title-user {
+	font-family: 'Montserrat', sans-serif;
+   font-weight: 700;
+   font-size: 17px;
+   line-height: 32px;
+   /* or 188% */
+   letter-spacing: 0.01em;
+}
+
+.registration-form {
+   padding-top: 98px;
+
+   @include screen-xl {
+      margin-top: 119px;
+   }
+
+   &__title {
+      margin-bottom: 20px;
+   }
+
+   &__sub-title {
+      margin-bottom: 30px;
+   }
+
+   &__holder {
+      margin-bottom: 30px;
+   }
+
+   &__switch {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 17px;
+      /* or 113% */
+      color: $black;
+   }
+
+   &__panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+   }
+}
+
+.contact-form {
+
+   &__column {
+   }
+
+   &__box {
+      &:not(:last-child) {
+         margin-bottom: 40px;
+      }
+   }
+
+   &__data {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+   }
+
+   &__input {
+      line-height: 121%;
+      padding: 16px 17px;
+      border: 0.5px solid rgba(0, 0, 0, 0.15);
+      &::placeholder {
+         line-height: 121%;
+      }
+   }
+
+   &__checkbox {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      label {
+         font-size: 13px;
+         line-height: 32px;
+         letter-spacing: 0.01em;
+         color: $gray;
+      }
+      a {
+         font-weight: 600;
+         color: $green;
+      }
+   }
+
+   &__submit {
+      font-family: 'Raleway';
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 106%;
+   }
+}
+
+.tabs {
+
+   &__nav {
+   }
+
+   &__nav-item {
+   }
+
+   &__nav-btn {
+   }
+
+   &__content {
+   }
+
+   &__panel {
+   }
+}
+.dropdown {
+
+   &__button {
+   }
+
+   &__list {
+   }
+
+   &__list-item {
+   }
+
+   &__input-hidden {
+   }
+}
+.button-green {
+}
+.form {
+
+   &__item {
+   }
+
+   &__label {
+   }
+}
+.file {
+
+   &__item {
+      position: relative;
+
+      input {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         opacity: 0;
+         font-size: 0;
+         cursor: pointer;
+      }
+   }
+
+   &__button {
+      display: inline-flex;
+      min-height: 40px;
+      border-radius: 30px;
+      justify-content: center;
+      align-items: center;
+      background-color: red;
+      padding: 0 20px;
+   }
+
+   &__preview {
+      display: inline-block;
+      max-width: 100px;
+      padding: 10px 0px 0px 0px;
+      img {
+         max-width: 100%;
+      }
+   }
+}

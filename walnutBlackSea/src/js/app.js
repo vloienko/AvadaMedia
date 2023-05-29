@@ -17,6 +17,11 @@ import './modules/main/video.js';
 import './modules/main/swiper.js';
 import './modules/main/dropdown.js';
 import './modules/main/tabsScript.js';
+import './modules/main/preview-file.js';
 // import './modules/main/';
+// import './modules/main/';
+// import './modules/main/';
+// import './modules/main/';
+
 
 //</MODULES dynamic>===========================
